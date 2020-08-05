@@ -37,13 +37,6 @@ namespace EGift.Api
                 app.UseDeveloperExceptionPage();
             }
 
-            var origins = this.Configuration.GetSection("AllowedOrigins").Get<string[]>();
-
-            app.UseCors(x => x
-                .WithOrigins(origins)
-                .AllowAnyMethod()
-                .AllowAnyHeader());
-
             app.UseHttpsRedirection();
 
             app.UseRouting();

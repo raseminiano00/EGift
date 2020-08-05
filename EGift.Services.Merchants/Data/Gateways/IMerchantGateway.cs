@@ -1,4 +1,5 @@
-﻿using EGift.Services.Merchants.Messages;
+﻿using EGift.Services.Merchants.Data.Entities;
+using EGift.Services.Merchants.Messages;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,5 +10,7 @@ namespace EGift.Services.Merchants.Data.Gateways
     public interface IMerchantGateway
     {
         Task<GetAllMerchantResponse>  GetAllMerchantAsync();
+
+        Task<GetMerchantProductResponse> GetMerchantProductsAsync(MerchantEntity merchant);
     }
 }

@@ -1,14 +1,19 @@
 ﻿namespace EGift.Services.Merchants.Tests.Factories
 {
+    using System;
+    using System.Data.SqlClient;
+    using EGift.Services.Merchants.Data.Entities;
     using EGift.Services.Merchants.Data.Factories;
+    using EGift.Services.Merchants.Models;
     using Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using System.Data.SqlClient;
+    using Moq;
 
     [TestClass]
-    public class MerchantSqlCommandFactoryTests
+    public class MerchantSqlCommandFactoryTests : MerchantSqlFactory
     {
         MerchantSqlFactory sut;
+
         [TestInitialize]
         public void Intialize()
         {
@@ -22,15 +27,15 @@
         }
 
         [TestMethod]
-        public void CreateGetAllMerchantCommand_ShouldReturnSqlCommand()
+        public void CreateStoredProcCommand_ShouldReturnSqlCommand()
         {
-            Assert.IsInstanceOfType(sut.CreateGetAllMerchantCommand(),typeof(SqlCommand));
+            Assert.IsInstanceOfType(this.CreateStoredProcCommand("sp_sample"),typeof(SqlCommand));
         }
 
         [TestMethod]
-        public void CreateGetAllMerchantCommand_ShouldStoredProc()
+        public void CreateStoredProcCommand_ShouldStoredProc()
         {
-            Assert.AreEqual(sut.CreateGetAllMerchantCommand().CommandType, System.Data.CommandType.StoredProcedure);
+            Assert.AreEqual(this.CreateStoredProcCommand("sp_sample").CommandType, System.Data.CommandType.StoredProcedure);
         }
 
         [TestMethod]
@@ -38,5 +43,13 @@
         {
             Assert.AreEqual(sut.CreateGetAllMerchantCommand().CommandText, "sp_GetAllMerchant");
         }
+
+        [TestMethod]
+        public void CreateGetMerchantProduct_ShouldStoredProcName_sp_GetAllMerchant()
+        {
+            Assert.AreEqual(sut.CreateGetMerchantProduct(new MerchantEntity()).CommandText, "sp_GetMerchantProducts");
+        }
+
+       
     }
 }

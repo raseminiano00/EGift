@@ -8,6 +8,7 @@
     [SenderName] NVARCHAR(MAX) NOT NULL, 
     [SenderEmailAddress] NVARCHAR(MAX) NOT NULL, 
     [DateOrdered] DATETIME NOT NULL, 
+    [AdditionalMessage] NVARCHAR(MAX) NULL, 
     CONSTRAINT [FK_Orders_Products] FOREIGN KEY ([ProductId]) REFERENCES [Products]([Id]),
     CONSTRAINT [FK_Orders_EGifts] FOREIGN KEY ([EGiftId]) REFERENCES [EGifts]([Id])
 )

@@ -1,6 +1,4 @@
-﻿
-
-namespace EGift.Api.Models.Merchants
+﻿namespace EGift.Api.Models.Merchants
 {
 
     using Newtonsoft.Json;
@@ -16,6 +14,9 @@ namespace EGift.Api.Models.Merchants
 
         [JsonProperty("address")]
         public string address { get; set; }
+
+        [JsonProperty("slug")]
+        public string slug { get; set; }
 
     }
 }

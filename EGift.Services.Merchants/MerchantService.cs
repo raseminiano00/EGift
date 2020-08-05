@@ -1,5 +1,6 @@
 ﻿using EGift.Services.Merchants.Data.Gateways;
 using EGift.Services.Merchants.Exceptions;
+using EGift.Services.Merchants.Extensions;
 using EGift.Services.Merchants.Messages;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,22 @@ namespace EGift.Services.Merchants
             try
             {
                 response = await this.gateway.GetAllMerchantAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new MerchantServiceException(ex);
+            }
+
+            return response;
+        }
+
+        public async Task<GetMerchantProductResponse> GetMerchantProductsAsync(GetMerchantProductsRequest request)
+        {
+            GetMerchantProductResponse response;
+
+            try
+            {
+                response = await this.gateway.GetMerchantProductsAsync(request.AsEntity());
             }
             catch (Exception ex)
             {

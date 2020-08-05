@@ -1,0 +1,6 @@
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\b\EGift.Services.Orders\Debug\netcoreapp3.1\EGift.Services.Orders.deps.json
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\b\EGift.Services.Orders\Debug\netcoreapp3.1\EGift.Services.Orders.dll
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Orders\Debug\netcoreapp3.1\EGift.Services.Orders.AssemblyInfoInputs.cache
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Orders\Debug\netcoreapp3.1\EGift.Services.Orders.AssemblyInfo.cs
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Orders\Debug\netcoreapp3.1\EGift.Services.Orders.csproj.CopyComplete
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Orders\Debug\netcoreapp3.1\EGift.Services.Orders.dll

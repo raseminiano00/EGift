@@ -3,6 +3,7 @@
     using System;
     using System.Threading.Tasks;
     using EGift.Infrastructure.Helpers;
+    using EGift.Services.Merchants.Data.Entities;
     using EGift.Services.Merchants.Data.Factories;
     using EGift.Services.Merchants.Exceptions;
     using EGift.Services.Merchants.Extensions;
@@ -29,7 +30,21 @@
             {
                 var command = this.factory.CreateGetAllMerchantCommand();
                 var result = await this.sqlHelper.ExecuteReaderAsync(command);
-                return result.AsResponse();
+                return result.AsGetAllMerchantResponse();
+            }
+            catch (Exception ex)
+            {
+                throw new MerchantDataException(ex);
+            }
+        }
+
+        public async Task<GetMerchantProductResponse> GetMerchantProductsAsync(MerchantEntity merchant)
+        {
+            try
+            {
+                var command = this.factory.CreateGetMerchantProduct(merchant);
+                var result = await this.sqlHelper.ExecuteReaderAsync(command);
+                return result.AsGetMerchantProductsResponse();
             }
             catch (Exception ex)
             {

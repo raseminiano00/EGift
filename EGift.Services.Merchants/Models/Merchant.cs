@@ -2,7 +2,7 @@
 {
     using System;
     using System.Runtime.Serialization;
-    using System.Text.Json;
+
     [DataContract]
     public class Merchant
     {
@@ -14,5 +14,11 @@
 
         [DataMember]
         public string Address { get; set; }
+
+        [DataMember]
+        public string Slug { get; set; }
+
+        [DataMember]
+        public Product Products { get; set; }
     }
 }

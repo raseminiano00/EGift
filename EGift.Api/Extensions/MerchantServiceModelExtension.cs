@@ -19,5 +19,15 @@
 
             return result;
         }
+        public static GetMerchantProductWebResponse AsResponse(this GetMerchantProductResponse serviceResponse)
+        {
+            var result = new GetMerchantProductWebResponse
+            {
+                Data = serviceResponse.Products.Select(m => m.AsResponse()).ToList(),
+                MerchantName = serviceResponse.MerchantName
+            };
+
+            return result;
+        }
     }
 }

@@ -1,9 +1,11 @@
 
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using EGift.Services.Merchants.Data.Entities;
 using EGift.Services.Merchants.Data.Factories;
 using EGift.Services.Merchants.Data.Gateways;
 using EGift.Services.Merchants.Exceptions;
+using EGift.Services.Merchants.Extensions;
 using EGift.Services.Merchants.Messages;
 using EGift.Services.Merchants.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -63,6 +65,23 @@ namespace EGift.Services.Merchants.Tests
         }
 
         [TestMethod]
+        public void GetMerchantProductsAsync_ShouldHaveValues()
+        {
+            mockGateway.Setup(m => m.GetMerchantProductsAsync(It.IsAny<MerchantEntity>())).Returns(
+                Task.FromResult(new GetMerchantProductResponse() 
+                {
+                    Products = new List<Product>()
+                }));
+
+            var result = sut.GetMerchantProductsAsync(new GetMerchantProductsRequest() 
+            {
+                merchant = new Merchant()
+            }).Result;
+
+            Assert.AreEqual(result.Products.Count, 0);
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(MerchantServiceException))]
         public async Task GetAllMerchant_ShouldHaveException()
         {
@@ -70,5 +89,7 @@ namespace EGift.Services.Merchants.Tests
 
             await sut.GetAllMerchantAsync();
         }
+
+
     }
 }
