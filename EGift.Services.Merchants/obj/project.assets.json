@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "EGift.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/EGift.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EGift.Infrastructure.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "EGift.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../EGift.Infrastructure/EGift.Infrastructure.csproj",
+      "msbuildProject": "../EGift.Infrastructure/EGift.Infrastructure.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "EGift.Infrastructure >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Roi\\.nuget\\packages\\": {}
@@ -32,7 +51,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Roi\\Documents\\REPOSITORY\\YS\\FullStackTraining\\EGift\\EGift.Infrastructure\\EGift.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Roi\\Documents\\REPOSITORY\\YS\\FullStackTraining\\EGift\\EGift.Infrastructure\\EGift.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

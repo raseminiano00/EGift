@@ -1,11 +1,13 @@
+
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using EGift.Services.Merchants.Data.Factories;
 using EGift.Services.Merchants.Data.Gateways;
+using EGift.Services.Merchants.Exceptions;
 using EGift.Services.Merchants.Messages;
 using EGift.Services.Merchants.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace EGift.Services.Merchants.Tests
 {
@@ -14,6 +16,7 @@ namespace EGift.Services.Merchants.Tests
     {
         MerchantService sut;
         Mock<IMerchantGateway> mockGateway;
+
         [TestInitialize]
         public void Initialize()
         {
@@ -21,12 +24,51 @@ namespace EGift.Services.Merchants.Tests
             sut = new MerchantService(mockGateway.Object);
         }
         [TestMethod]
-        public async void Constructor_ShouldSet_Gateway()
+        public void Constructor_ShouldSet_Gateway()
         {
-            mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns());
-            var result = await sut.GetAllMerchant();
+            Assert.IsNotNull(sut);
+        }
+        [TestMethod]
+        public void GetAllMerchant_ShouldNotNull()
+        {
+            mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns(Task.FromResult(new GetAllMerchantResponse()));
 
-            Assert.AreEqual(result.Successful,true);
+            var result = sut.GetAllMerchant().Result;
+
+            Assert.IsInstanceOfType(result,typeof(GetAllMerchantResponse));
+        }
+
+        [TestMethod]
+        public void GetAllMerchant_ShouldCode404()
+        {
+            mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns(Task.FromResult(new GetAllMerchantResponse() { Code = 404}));
+
+            var result = sut.GetAllMerchant().Result;
+
+            Assert.AreEqual(result.Code, 404);
+        }
+
+        [TestMethod]
+        public void GetAllMerchant_ShouldHaveValues()
+        {
+            mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns(Task.FromResult(new GetAllMerchantResponse() 
+            { 
+                Code = 200,
+                Merchants = new List<Merchant>() { new Merchant() { Id=new System.Guid("00000000-0000-0000-0000-000000000000"),Name="Mcdo",Address="PNOVAL"} } 
+            }));
+
+            var result = sut.GetAllMerchant().Result;
+
+            Assert.AreEqual(result.Merchants.Count, 1);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(MerchantServiceException))]
+        public async Task GetAllMerchant_ShouldHaveException()
+        {
+            mockGateway.Setup(m => m.GetAllMerchantAsync()).Throws(new System.Exception("sample"));
+
+            await sut.GetAllMerchant();
         }
     }
 }

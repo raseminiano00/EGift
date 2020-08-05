@@ -8,4 +8,8 @@
     <Folder Include="Extensions\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EGift.Infrastructure\EGift.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

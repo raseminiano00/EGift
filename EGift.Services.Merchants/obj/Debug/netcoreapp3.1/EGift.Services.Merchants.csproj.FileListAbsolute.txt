@@ -1,9 +1,12 @@
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Merchants\bin\Debug\netcoreapp3.1\EGift.Services.Merchants.deps.json
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Merchants\bin\Debug\netcoreapp3.1\EGift.Services.Merchants.dll
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Merchants\bin\Debug\netcoreapp3.1\EGift.Services.Merchants.pdb
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Merchants\bin\Debug\netcoreapp3.1\EGift.Infrastructure.dll
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Merchants\bin\Debug\netcoreapp3.1\EGift.Infrastructure.pdb
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Merchants\obj\Debug\netcoreapp3.1\EGift.Services.Merchants.csprojAssemblyReference.cache
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Merchants\obj\Debug\netcoreapp3.1\EGift.Services.Merchants.AssemblyInfoInputs.cache
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Merchants\obj\Debug\netcoreapp3.1\EGift.Services.Merchants.AssemblyInfo.cs
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Merchants\obj\Debug\netcoreapp3.1\EGift.Services.Merchants.csproj.CoreCompileInputs.cache
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Merchants\obj\Debug\netcoreapp3.1\EGift.Services.Merchants.csproj.CopyComplete
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Merchants\obj\Debug\netcoreapp3.1\EGift.Services.Merchants.dll
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Merchants\obj\Debug\netcoreapp3.1\EGift.Services.Merchants.pdb

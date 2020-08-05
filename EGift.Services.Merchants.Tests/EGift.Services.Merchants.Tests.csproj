@@ -18,4 +18,8 @@
     <ProjectReference Include="..\EGift.Services.Merchants\EGift.Services.Merchants.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Gateways\" />
+  </ItemGroup>
+
 </Project>

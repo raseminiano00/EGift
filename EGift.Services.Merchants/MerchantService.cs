@@ -19,7 +19,7 @@ namespace EGift.Services.Merchants
 
         public async Task<GetAllMerchantResponse> GetAllMerchant()
         {
-            var response = new GetAllMerchantResponse { Code = 200 };
+            GetAllMerchantResponse response;
 
             try
             {

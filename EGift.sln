@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Merchant", "Merchant", "{4F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EGift.Services.Merchants.Tests", "EGift.Services.Merchants.Tests\EGift.Services.Merchants.Tests.csproj", "{A932D938-7D92-4C97-8508-93FCCCEA275D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EGift.Infrastructure", "EGift.Infrastructure\EGift.Infrastructure.csproj", "{D702FFD5-ADA0-4ABA-B246-2A661A3A22EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{344F9DD2-7873-471B-98C8-95ADD6FE24CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{A932D938-7D92-4C97-8508-93FCCCEA275D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A932D938-7D92-4C97-8508-93FCCCEA275D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A932D938-7D92-4C97-8508-93FCCCEA275D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D702FFD5-ADA0-4ABA-B246-2A661A3A22EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D702FFD5-ADA0-4ABA-B246-2A661A3A22EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D702FFD5-ADA0-4ABA-B246-2A661A3A22EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D702FFD5-ADA0-4ABA-B246-2A661A3A22EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -33,6 +41,7 @@ Global
 		{56E1229E-2590-4ACF-AD78-E7B68745E6E4} = {4F3DFF0B-A9E6-474F-90C2-F25D89F03DF9}
 		{4F3DFF0B-A9E6-474F-90C2-F25D89F03DF9} = {895284D9-E1D7-4160-B60A-EFDD66FF545F}
 		{A932D938-7D92-4C97-8508-93FCCCEA275D} = {4F3DFF0B-A9E6-474F-90C2-F25D89F03DF9}
+		{D702FFD5-ADA0-4ABA-B246-2A661A3A22EF} = {344F9DD2-7873-471B-98C8-95ADD6FE24CB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81166AF0-F54C-4CEC-B679-7FE12C1AF92A}

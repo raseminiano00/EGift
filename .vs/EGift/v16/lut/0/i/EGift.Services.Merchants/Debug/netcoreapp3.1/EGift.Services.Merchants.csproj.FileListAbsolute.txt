@@ -1,6 +1,5 @@
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\b\EGift.Services.Merchants\Debug\netcoreapp3.1\EGift.Services.Merchants.deps.json
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\b\EGift.Services.Merchants\Debug\netcoreapp3.1\EGift.Services.Merchants.dll
-C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Merchants\Debug\netcoreapp3.1\EGift.Services.Merchants.csprojAssemblyReference.cache
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Merchants\Debug\netcoreapp3.1\EGift.Services.Merchants.AssemblyInfoInputs.cache
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Merchants\Debug\netcoreapp3.1\EGift.Services.Merchants.AssemblyInfo.cs
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Merchants\Debug\netcoreapp3.1\EGift.Services.Merchants.csproj.CopyComplete

@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "EGift.Services.Merchants/1.0.0": {
+        "dependencies": {
+          "EGift.Infrastructure": "1.0.0"
+        },
         "runtime": {
           "EGift.Services.Merchants.dll": {}
+        }
+      },
+      "EGift.Infrastructure/1.0.0": {
+        "runtime": {
+          "EGift.Infrastructure.dll": {}
         }
       }
     }
   },
   "libraries": {
     "EGift.Services.Merchants/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EGift.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

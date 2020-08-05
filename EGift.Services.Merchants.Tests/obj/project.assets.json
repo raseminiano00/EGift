@@ -1771,9 +1771,22 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
+      "EGift.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/EGift.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EGift.Infrastructure.dll": {}
+        }
+      },
       "EGift.Services.Merchants/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "EGift.Infrastructure": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/EGift.Services.Merchants.dll": {}
         },
@@ -6179,6 +6192,11 @@
         "system.xml.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xmldocument.nuspec"
       ]
+    },
+    "EGift.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../EGift.Infrastructure/EGift.Infrastructure.csproj",
+      "msbuildProject": "../EGift.Infrastructure/EGift.Infrastructure.csproj"
     },
     "EGift.Services.Merchants/1.0.0": {
       "type": "project",
