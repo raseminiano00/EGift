@@ -1,0 +1,10 @@
+C:\Users\Roi\source\repos\ExampleDB\bin\Debug\ExampleDB.dacpac
+C:\Users\Roi\source\repos\ExampleDB\bin\Debug\ExampleDB.dll
+C:\Users\Roi\source\repos\ExampleDB\bin\Debug\ExampleDB.pdb
+C:\Users\Roi\source\repos\ExampleDB\obj\Debug\ExampleDB.sqlprojAssemblyReference.cache
+C:\Users\Roi\source\repos\ExampleDB\obj\Debug\ExampleDB.dll
+C:\Users\Roi\source\repos\ExampleDB\obj\Debug\ExampleDB.pdb
+C:\Users\Roi\source\repos\ExampleDB\obj\Debug\Model.xml
+C:\Users\Roi\source\repos\ExampleDB\obj\Debug\refactor.xml
+C:\Users\Roi\source\repos\ExampleDB\obj\Debug\postdeploy.sql
+C:\Users\Roi\source\repos\ExampleDB\obj\Debug\predeploy.sql
