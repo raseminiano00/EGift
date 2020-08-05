@@ -1,0 +1,3 @@
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders.Tests\obj\Debug\netcoreapp3.1\EGift.Services.Orders.Tests.AssemblyInfoInputs.cache
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders.Tests\obj\Debug\netcoreapp3.1\EGift.Services.Orders.Tests.AssemblyInfo.cs
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders.Tests\obj\Debug\netcoreapp3.1\EGift.Services.Orders.Tests.csproj.CoreCompileInputs.cache

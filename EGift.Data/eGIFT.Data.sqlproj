@@ -60,6 +60,7 @@
     <Folder Include="Tables" />
     <Folder Include="Post-Deployment" />
     <Folder Include="StoredProcedures" />
+    <Folder Include="StoredProcedures\Orders" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Merchants.sql" />
@@ -70,6 +71,9 @@
     <None Include="Post-Deployment\EGifts.sql" />
     <Build Include="StoredProcedures\sp_GetAllMerchant.sql" />
     <Build Include="StoredProcedures\sp_GetMerchantProduct.sql" />
+    <Build Include="StoredProcedures\Orders\sp_SearchOrder.sql" />
+    <Build Include="StoredProcedures\Orders\sp_GetAllOrders.sql" />
+    <Build Include="StoredProcedures\Orders\sp_InsertNewOrder.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="eGIFT.publish.xml" />

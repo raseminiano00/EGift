@@ -1,0 +1,22 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Orders].[EGiftId] is being dropped, data loss could occur.
+
+** User actions
+     Drop
+       [dbo].[FK_Orders_EGifts] (Foreign Key)
+     Alter
+       [dbo].[Orders] (Table)
+     Create
+       [dbo].[sp_GetAllOrders] (Procedure)
+
+** Supporting actions
+
+The column [dbo].[Orders].[EGiftId] is being dropped, data loss could occur.
+

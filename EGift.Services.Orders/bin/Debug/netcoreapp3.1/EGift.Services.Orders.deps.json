@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "EGift.Services.Orders/1.0.0": {
+        "runtime": {
+          "EGift.Services.Orders.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EGift.Services.Orders/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

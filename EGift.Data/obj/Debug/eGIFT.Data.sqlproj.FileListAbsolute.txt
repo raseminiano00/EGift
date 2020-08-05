@@ -10,7 +10,3 @@ C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Data\bin\Debu
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Data\obj\Debug\eGIFT.Data.sqlprojAssemblyReference.cache
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Data\obj\Debug\Data.dll
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Data\obj\Debug\Data.pdb
-C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Data\obj\Debug\Model.xml
-C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Data\obj\Debug\refactor.xml
-C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Data\obj\Debug\postdeploy.sql
-C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Data\obj\Debug\predeploy.sql

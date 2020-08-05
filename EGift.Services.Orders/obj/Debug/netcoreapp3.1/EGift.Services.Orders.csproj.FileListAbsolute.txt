@@ -1,0 +1,8 @@
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders\bin\Debug\netcoreapp3.1\EGift.Services.Orders.deps.json
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders\bin\Debug\netcoreapp3.1\EGift.Services.Orders.dll
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders\bin\Debug\netcoreapp3.1\EGift.Services.Orders.pdb
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders\obj\Debug\netcoreapp3.1\EGift.Services.Orders.AssemblyInfoInputs.cache
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders\obj\Debug\netcoreapp3.1\EGift.Services.Orders.AssemblyInfo.cs
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders\obj\Debug\netcoreapp3.1\EGift.Services.Orders.csproj.CoreCompileInputs.cache
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders\obj\Debug\netcoreapp3.1\EGift.Services.Orders.dll
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders\obj\Debug\netcoreapp3.1\EGift.Services.Orders.pdb

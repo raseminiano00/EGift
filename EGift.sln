@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{73D85B3F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EGift.Services.Orders", "EGift.Services.Orders\EGift.Services.Orders.csproj", "{3F629F9D-E0F7-42A3-96BC-4960152BD815}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EGift.Services.Orders.Tests", "EGift.Services.Orders.Tests\EGift.Services.Orders.Tests.csproj", "{0AE69E60-8A60-4613-B9AC-DE621D32257A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{3F629F9D-E0F7-42A3-96BC-4960152BD815}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F629F9D-E0F7-42A3-96BC-4960152BD815}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F629F9D-E0F7-42A3-96BC-4960152BD815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AE69E60-8A60-4613-B9AC-DE621D32257A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AE69E60-8A60-4613-B9AC-DE621D32257A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AE69E60-8A60-4613-B9AC-DE621D32257A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AE69E60-8A60-4613-B9AC-DE621D32257A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +76,7 @@ Global
 		{B08216B8-8016-444A-B299-D8F979EE64D7} = {C1012185-200C-4122-8D84-C0AEF91E4729}
 		{73D85B3F-2504-4A7F-980F-D58C6BA812F1} = {895284D9-E1D7-4160-B60A-EFDD66FF545F}
 		{3F629F9D-E0F7-42A3-96BC-4960152BD815} = {73D85B3F-2504-4A7F-980F-D58C6BA812F1}
+		{0AE69E60-8A60-4613-B9AC-DE621D32257A} = {73D85B3F-2504-4A7F-980F-D58C6BA812F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81166AF0-F54C-4CEC-B679-7FE12C1AF92A}
