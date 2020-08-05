@@ -1,0 +1,12 @@
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\b\EGift.Services.Merchants.Tests\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\b\EGift.Services.Merchants.Tests\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\b\EGift.Services.Merchants.Tests\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\b\EGift.Services.Merchants.Tests\Debug\netcoreapp3.1\EGift.Services.Merchants.Tests.deps.json
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\b\EGift.Services.Merchants.Tests\Debug\netcoreapp3.1\EGift.Services.Merchants.Tests.runtimeconfig.json
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\b\EGift.Services.Merchants.Tests\Debug\netcoreapp3.1\EGift.Services.Merchants.Tests.runtimeconfig.dev.json
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\b\EGift.Services.Merchants.Tests\Debug\netcoreapp3.1\EGift.Services.Merchants.Tests.dll
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Merchants.Tests\Debug\netcoreapp3.1\EGift.Services.Merchants.Tests.AssemblyInfoInputs.cache
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Merchants.Tests\Debug\netcoreapp3.1\EGift.Services.Merchants.Tests.AssemblyInfo.cs
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Merchants.Tests\Debug\netcoreapp3.1\EGift.Services.Merchants.Tests.csproj.CopyComplete
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Merchants.Tests\Debug\netcoreapp3.1\EGift.Services.Merchants.Tests.dll
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Merchants.Tests\Debug\netcoreapp3.1\EGift.Services.Merchants.Tests.genruntimeconfig.cache
