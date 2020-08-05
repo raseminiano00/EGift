@@ -9,7 +9,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 
-namespace EGift.Services.Merchants.Tests
+namespace EGift.Services.Merchants.Tests.Gateways
 {
     [TestClass]
     public class MerchantGatewayTests
@@ -62,7 +62,7 @@ namespace EGift.Services.Merchants.Tests
 
             var result = sut.GetAllMerchantAsync().Result;
 
-            Assert.IsNotNull(result.Merchants);
+            Assert.AreEqual(result.Merchants.Count,0);
         }
     }
 }

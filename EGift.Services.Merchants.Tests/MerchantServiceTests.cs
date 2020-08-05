@@ -33,7 +33,7 @@ namespace EGift.Services.Merchants.Tests
         {
             mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns(Task.FromResult(new GetAllMerchantResponse()));
 
-            var result = sut.GetAllMerchant().Result;
+            var result = sut.GetAllMerchantAsync().Result;
 
             Assert.IsInstanceOfType(result,typeof(GetAllMerchantResponse));
         }
@@ -43,7 +43,7 @@ namespace EGift.Services.Merchants.Tests
         {
             mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns(Task.FromResult(new GetAllMerchantResponse() { Code = 404}));
 
-            var result = sut.GetAllMerchant().Result;
+            var result = sut.GetAllMerchantAsync().Result;
 
             Assert.AreEqual(result.Code, 404);
         }
@@ -57,7 +57,7 @@ namespace EGift.Services.Merchants.Tests
                 Merchants = new List<Merchant>() { new Merchant() { Id=new System.Guid("00000000-0000-0000-0000-000000000000"),Name="Mcdo",Address="PNOVAL"} } 
             }));
 
-            var result = sut.GetAllMerchant().Result;
+            var result = sut.GetAllMerchantAsync().Result;
 
             Assert.AreEqual(result.Merchants.Count, 1);
         }
@@ -68,7 +68,7 @@ namespace EGift.Services.Merchants.Tests
         {
             mockGateway.Setup(m => m.GetAllMerchantAsync()).Throws(new System.Exception("sample"));
 
-            await sut.GetAllMerchant();
+            await sut.GetAllMerchantAsync();
         }
     }
 }

@@ -8,6 +8,6 @@ namespace EGift.Services.Merchants
 {
     public interface IMerchantService
     {
-        Task<GetAllMerchantResponse> GetAllMerchant();
+        Task<GetAllMerchantResponse> GetAllMerchantAsync();
     }
 }

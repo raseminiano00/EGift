@@ -17,7 +17,7 @@ namespace EGift.Services.Merchants
             this.gateway = gateway;
         }
 
-        public async Task<GetAllMerchantResponse> GetAllMerchant()
+        public async Task<GetAllMerchantResponse> GetAllMerchantAsync()
         {
             GetAllMerchantResponse response;
 
