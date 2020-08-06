@@ -15,42 +15,42 @@ namespace EGift.Services.Merchants.Tests.Gateways
     [TestClass]
     public class MerchantGatewayTests
     {
-        MerchantGateway sut;
+        MerchantDataGateway sut;
         Mock<IMerchantSqlFactory> mockFactory;
         Mock<ISqlHelper> mockHelper;
 
         [TestInitialize]
         public void Initialize()
         {
-            mockFactory = new Mock<IMerchantSqlFactory>();
-            mockHelper = new Mock<ISqlHelper>();
-            sut = new MerchantGateway(mockFactory.Object,mockHelper.Object);
+            this.mockFactory = new Mock<IMerchantSqlFactory>();
+            this.mockHelper = new Mock<ISqlHelper>();
+            this.sut = new MerchantDataGateway(this.mockFactory.Object, this.mockHelper.Object);
         }
 
 
         [TestMethod]
         public void Constructor_ShouldAccept_WhenArgIsValid()
         {
-            mockFactory = new Mock<IMerchantSqlFactory>();
-            mockHelper = new Mock<ISqlHelper>();
-            sut = new MerchantGateway(mockFactory.Object, mockHelper.Object);
+            this.mockFactory = new Mock<IMerchantSqlFactory>();
+            this.mockHelper = new Mock<ISqlHelper>();
+            this.sut = new MerchantDataGateway(this.mockFactory.Object, this.mockHelper.Object);
 
-            Assert.IsNotNull(sut);
+            Assert.IsNotNull(this.sut);
         }
         [TestMethod]
         [ExpectedException(typeof(MerchantGatewayException))]
         public void Constructor_ShouldThrow_WhenArgIsNull()
         {
-            sut = new MerchantGateway(null, null);
+            this.sut = new MerchantDataGateway(null, null);
         }
 
         [TestMethod]
         public void GetAllMerchantAsync_ShouldHaveValue()
         {
-            mockFactory.Setup(m => m.CreateGetAllMerchantCommand()).Returns(new SqlCommand());
-            mockHelper.Setup(m => m.ExecuteReaderAsync(It.IsAny<SqlCommand>())).Returns(Task.FromResult(new System.Data.DataTable()));
+            this.mockFactory.Setup(m => m.CreateGetAllMerchantCommand()).Returns(new SqlCommand());
+            this.mockHelper.Setup(m => m.ExecuteReaderAsync(It.IsAny<SqlCommand>())).Returns(Task.FromResult(new System.Data.DataTable()));
 
-            var result = sut.GetAllMerchantAsync().Result;
+            var result = this.sut.GetAllMerchantAsync().Result;
 
             Assert.IsNotNull(result.Merchants);
         }
@@ -58,21 +58,21 @@ namespace EGift.Services.Merchants.Tests.Gateways
         [TestMethod]
         public void GetAllMerchantAsync_ShouldHaveZeroMerchants()
         {
-            mockFactory.Setup(m => m.CreateGetAllMerchantCommand()).Returns(new SqlCommand());
-            mockHelper.Setup(m => m.ExecuteReaderAsync(It.IsAny<SqlCommand>())).Returns(Task.FromResult(new System.Data.DataTable()));
+            this.mockFactory.Setup(m => m.CreateGetAllMerchantCommand()).Returns(new SqlCommand());
+            this.mockHelper.Setup(m => m.ExecuteReaderAsync(It.IsAny<SqlCommand>())).Returns(Task.FromResult(new System.Data.DataTable()));
 
-            var result = sut.GetAllMerchantAsync().Result;
+            var result = this.sut.GetAllMerchantAsync().Result;
 
-            Assert.AreEqual(result.Merchants.Count,0);
+            Assert.AreEqual(result.Merchants.Count, 0);
         }
 
         [TestMethod]
         public void GetAllMerchantAsync_ShouldHaveProducts()
         {
-            mockFactory.Setup(m => m.CreateGetMerchantProduct(It.IsAny<MerchantEntity>())).Returns(new SqlCommand());
-            mockHelper.Setup(m => m.ExecuteReaderAsync(It.IsAny<SqlCommand>())).Returns(Task.FromResult(new System.Data.DataTable()));
+            this.mockFactory.Setup(m => m.CreateGetMerchantProduct(It.IsAny<MerchantEntity>())).Returns(new SqlCommand());
+            this.mockHelper.Setup(m => m.ExecuteReaderAsync(It.IsAny<SqlCommand>())).Returns(Task.FromResult(new System.Data.DataTable()));
 
-            var result = sut.GetMerchantProductsAsync(It.IsAny<MerchantEntity>()).Result;
+            var result = this.sut.GetMerchantProductsAsync(It.IsAny<MerchantEntity>()).Result;
 
             Assert.AreEqual(result.Products.Count, 0);
         }

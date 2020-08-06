@@ -1,7 +1,7 @@
-﻿using EGift.Services.Merchants.Models;
-namespace EGift.Services.Merchants.Messages
+﻿namespace EGift.Services.Merchants.Messages
 {
     using System.Runtime.Serialization;
+    using EGift.Services.Merchants.Models;
 
     public class GetMerchantProductsRequest
     {

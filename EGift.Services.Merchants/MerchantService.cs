@@ -1,19 +1,17 @@
-﻿using EGift.Services.Merchants.Data.Gateways;
-using EGift.Services.Merchants.Exceptions;
-using EGift.Services.Merchants.Extensions;
-using EGift.Services.Merchants.Messages;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EGift.Services.Merchants
+﻿namespace EGift.Services.Merchants
 {
-    public class MerchantService :IMerchantService
-    {
-        private readonly IMerchantGateway gateway;
+    using System;
+    using System.Threading.Tasks;
+    using EGift.Services.Merchants.Data.Gateways;
+    using EGift.Services.Merchants.Exceptions;
+    using EGift.Services.Merchants.Extensions;
+    using EGift.Services.Merchants.Messages;
 
-        public MerchantService(IMerchantGateway gateway)
+    public class MerchantService : IMerchantService
+    {
+        private readonly IMerchantDataGateway gateway;
+
+        public MerchantService(IMerchantDataGateway gateway)
         {
             this.gateway = gateway;
         }

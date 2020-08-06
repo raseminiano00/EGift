@@ -1,15 +1,16 @@
-﻿
-namespace EGift.Services.Merchants.Messages
+﻿namespace EGift.Services.Merchants.Messages
 {
     using System.Collections.Generic;
     using System.Runtime.Serialization;
+    using EGift.Infrastructure.Common;
     using EGift.Services.Merchants.Models;
 
-    public class GetAllMerchantResponse :Response
+    [DataContract]
+    public class GetAllMerchantResponse : Response
     {
         public GetAllMerchantResponse()
         {
-            Merchants = new List<Merchant>();
+            this.Merchants = new List<Merchant>();
         }
 
         [DataMember]

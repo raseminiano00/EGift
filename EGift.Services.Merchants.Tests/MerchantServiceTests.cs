@@ -1,51 +1,49 @@
-
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using EGift.Services.Merchants.Data.Entities;
-using EGift.Services.Merchants.Data.Factories;
-using EGift.Services.Merchants.Data.Gateways;
-using EGift.Services.Merchants.Exceptions;
-using EGift.Services.Merchants.Extensions;
-using EGift.Services.Merchants.Messages;
-using EGift.Services.Merchants.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
-
 namespace EGift.Services.Merchants.Tests
 {
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+    using EGift.Services.Merchants.Data.Entities;
+    using EGift.Services.Merchants.Data.Gateways;
+    using EGift.Services.Merchants.Exceptions;
+    using EGift.Services.Merchants.Messages;
+    using EGift.Services.Merchants.Models;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Moq;
+
     [TestClass]
     public class MerchantServiceTests
     {
         MerchantService sut;
-        Mock<IMerchantGateway> mockGateway;
+        Mock<IMerchantDataGateway> mockGateway;
 
         [TestInitialize]
         public void Initialize()
         {
-            mockGateway = new Mock<IMerchantGateway>();
-            sut = new MerchantService(mockGateway.Object);
+            this.mockGateway = new Mock<IMerchantDataGateway>();
+            this.sut = new MerchantService(this.mockGateway.Object);
         }
         [TestMethod]
         public void Constructor_ShouldSet_Gateway()
         {
-            Assert.IsNotNull(sut);
+            Assert.IsNotNull(this.sut);
         }
         [TestMethod]
         public void GetAllMerchant_ShouldNotNull()
         {
-            mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns(Task.FromResult(new GetAllMerchantResponse()));
+            this.mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns(Task.FromResult(new GetAllMerchantResponse()));
 
-            var result = sut.GetAllMerchantAsync().Result;
+            var result = this.sut.GetAllMerchantAsync().Result;
 
-            Assert.IsInstanceOfType(result,typeof(GetAllMerchantResponse));
+            Assert.IsInstanceOfType(result, typeof(GetAllMerchantResponse));
         }
 
         [TestMethod]
         public void GetAllMerchant_ShouldCode404()
         {
-            mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns(Task.FromResult(new GetAllMerchantResponse() { Code = 404}));
+            this.mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns(Task.FromResult(new GetAllMerchantResponse() { Code = 404
+            }));
 
-            var result = sut.GetAllMerchantAsync().Result;
+            var result = this.sut.GetAllMerchantAsync().Result;
 
             Assert.AreEqual(result.Code, 404);
         }
@@ -53,13 +51,15 @@ namespace EGift.Services.Merchants.Tests
         [TestMethod]
         public void GetAllMerchant_ShouldHaveValues()
         {
-            mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns(Task.FromResult(new GetAllMerchantResponse() 
+            this.mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns(Task.FromResult(new GetAllMerchantResponse() 
             { 
                 Code = 200,
-                Merchants = new List<Merchant>() { new Merchant() { Id=new System.Guid("00000000-0000-0000-0000-000000000000"),Name="Mcdo",Address="PNOVAL"} } 
+                Merchants = new List<Merchant>() { new Merchant() { Id = new System.Guid("00000000-0000-0000-0000-000000000000"), Name = "Mcdo", Address = "PNOVAL"
+                    } 
+                } 
             }));
 
-            var result = sut.GetAllMerchantAsync().Result;
+            var result = this.sut.GetAllMerchantAsync().Result;
 
             Assert.AreEqual(result.Merchants.Count, 1);
         }
@@ -67,13 +67,13 @@ namespace EGift.Services.Merchants.Tests
         [TestMethod]
         public void GetMerchantProductsAsync_ShouldHaveValues()
         {
-            mockGateway.Setup(m => m.GetMerchantProductsAsync(It.IsAny<MerchantEntity>())).Returns(
+            this.mockGateway.Setup(m => m.GetMerchantProductsAsync(It.IsAny<MerchantEntity>())).Returns(
                 Task.FromResult(new GetMerchantProductResponse() 
                 {
                     Products = new List<Product>()
                 }));
 
-            var result = sut.GetMerchantProductsAsync(new GetMerchantProductsRequest() 
+            var result = this.sut.GetMerchantProductsAsync(new GetMerchantProductsRequest() 
             {
                 merchant = new Merchant()
             }).Result;
@@ -85,9 +85,9 @@ namespace EGift.Services.Merchants.Tests
         [ExpectedException(typeof(MerchantServiceException))]
         public async Task GetAllMerchant_ShouldHaveException()
         {
-            mockGateway.Setup(m => m.GetAllMerchantAsync()).Throws(new System.Exception("sample"));
+            this.mockGateway.Setup(m => m.GetAllMerchantAsync()).Throws(new System.Exception("sample"));
 
-            await sut.GetAllMerchantAsync();
+            await this.sut.GetAllMerchantAsync();
         }
 
 

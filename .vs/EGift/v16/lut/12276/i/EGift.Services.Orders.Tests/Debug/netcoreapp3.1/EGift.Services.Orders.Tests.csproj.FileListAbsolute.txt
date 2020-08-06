@@ -1,3 +1,0 @@
-C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Orders.Tests\Debug\netcoreapp3.1\EGift.Services.Orders.Tests.AssemblyInfoInputs.cache
-C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Orders.Tests\Debug\netcoreapp3.1\EGift.Services.Orders.Tests.AssemblyInfo.cs
-C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Orders.Tests\Debug\netcoreapp3.1\EGift.Services.Orders.Tests.csprojAssemblyReference.cache

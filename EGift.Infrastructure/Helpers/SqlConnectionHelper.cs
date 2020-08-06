@@ -1,7 +1,5 @@
-﻿
-namespace EGift.Infrastructure.Helpers
+﻿namespace EGift.Infrastructure.Helpers
 {
-
     using System.Data.SqlClient;
 
     public class SqlConnectionHelper : ISqlConnectionHelper<SqlConnection>

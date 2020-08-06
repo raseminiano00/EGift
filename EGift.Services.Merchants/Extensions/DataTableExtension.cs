@@ -1,10 +1,7 @@
 ﻿namespace EGift.Services.Merchants.Extensions
 {
     using System;
-    using System.Collections.Generic;
     using System.Data;
-    using System.Text;
-    using System.Linq;
     using EGift.Services.Merchants.Messages;
     using EGift.Services.Merchants.Models;
 
@@ -24,6 +21,7 @@
                 };
                 result.Merchants.Add(merchant);
             }
+
             return result;
         }
 
@@ -42,6 +40,7 @@
                 result.Products.Add(product);
                 result.MerchantName = row.ItemArray[0].ToString();
             }
+
             return result;
         }
     }

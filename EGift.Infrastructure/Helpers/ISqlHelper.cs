@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EGift.Infrastructure.Helpers
+﻿namespace EGift.Infrastructure.Helpers
 {
+    using System.Data;
+    using System.Data.SqlClient;
+    using System.Threading.Tasks;
+
     public interface ISqlHelper
     {
         Task<DataTable> ExecuteReaderAsync(SqlCommand command);

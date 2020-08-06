@@ -13,16 +13,16 @@ namespace EGift.Infrastructure.Helpers
     {
         private readonly ISqlConnectionHelper<SqlConnection> connectionHelper;
         private readonly DataTable dataResult;
+
         public SqlHelper(ISqlConnectionHelper<SqlConnection> connectionHelper)
         {
             this.connectionHelper = connectionHelper;
-            dataResult = new DataTable();
+            this.dataResult = new DataTable();
         }
 
         public async Task ExecuteAsync(SqlCommand command)
         {
-
-            using (SqlConnection connection = connectionHelper.EstablishConnection())
+            using (SqlConnection connection = this.connectionHelper.EstablishConnection())
             {
                 command.Connection = connection;
                 await command.ExecuteReaderAsync();
@@ -31,24 +31,25 @@ namespace EGift.Infrastructure.Helpers
 
         public async Task<DataTable> ExecuteReaderAsync(SqlCommand command)
         {
-            ClearDataResult();
-            using (SqlConnection connection = connectionHelper.EstablishConnection())
+            this.ClearDataResult();
+            using (SqlConnection connection = this.connectionHelper.EstablishConnection())
             {
                 command.Connection = connection;
                 var reader = await command.ExecuteReaderAsync();
-                loadToDataResult(reader);
+                this.LoadToDataResult(reader);
             }
-            return dataResult;
+
+            return this.dataResult;
         }
 
         private void ClearDataResult()
         {
-            dataResult.Clear();
+            this.dataResult.Clear();
         }
 
-        private void loadToDataResult(SqlDataReader reader)
+        private void LoadToDataResult(SqlDataReader reader)
         {
-            dataResult.Load(reader);
+            this.dataResult.Load(reader);
         }
     }
 }

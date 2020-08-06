@@ -10,7 +10,7 @@
         public static void InjectMerchantService(this IServiceCollection services)
         {
             services.AddScoped<IMerchantSqlFactory, MerchantSqlFactory>();
-            services.AddScoped<IMerchantGateway,MerchantGateway>();
+            services.AddScoped<IMerchantDataGateway, MerchantDataGateway>();
             services.AddScoped<IMerchantService, MerchantService>();
         }
     }

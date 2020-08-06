@@ -17,19 +17,19 @@
         [TestInitialize]
         public void Intialize()
         {
-            sut = new MerchantSqlFactory();
+            this.sut = new MerchantSqlFactory();
         }
 
         [TestMethod]
         public void Constructor_ShouldNotNull()
         {
-            Assert.IsNotNull(sut);
+            Assert.IsNotNull(this.sut);
         }
 
         [TestMethod]
         public void CreateStoredProcCommand_ShouldReturnSqlCommand()
         {
-            Assert.IsInstanceOfType(this.CreateStoredProcCommand("sp_sample"),typeof(SqlCommand));
+            Assert.IsInstanceOfType(this.CreateStoredProcCommand("sp_sample"), typeof(SqlCommand));
         }
 
         [TestMethod]
@@ -41,13 +41,13 @@
         [TestMethod]
         public void CreateGetAllMerchantCommand_ShouldStoredProcName_sp_GetAllMerchant()
         {
-            Assert.AreEqual(sut.CreateGetAllMerchantCommand().CommandText, "sp_GetAllMerchant");
+            Assert.AreEqual(this.sut.CreateGetAllMerchantCommand().CommandText, "sp_GetAllMerchant");
         }
 
         [TestMethod]
         public void CreateGetMerchantProduct_ShouldStoredProcName_sp_GetAllMerchant()
         {
-            Assert.AreEqual(sut.CreateGetMerchantProduct(new MerchantEntity()).CommandText, "sp_GetMerchantProducts");
+            Assert.AreEqual(this.sut.CreateGetMerchantProduct(new MerchantEntity()).CommandText, "sp_GetMerchantProducts");
         }
 
        

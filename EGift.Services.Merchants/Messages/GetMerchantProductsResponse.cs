@@ -1,16 +1,16 @@
-﻿using EGift.Services.Merchants.Models;
-using System;
-using System.Collections.Generic;
-using System.Runtime.Serialization;
-using System.Text;
-
+﻿
 namespace EGift.Services.Merchants.Messages
 {
-    public class GetMerchantProductResponse
+    using EGift.Infrastructure.Common;
+    using EGift.Services.Merchants.Models;
+    using System.Collections.Generic;
+    using System.Runtime.Serialization;
+
+    public class GetMerchantProductResponse : Response
     {
         public GetMerchantProductResponse()
         {
-            Products = new List<Product>();
+            this.Products = new List<Product>();
         }
         [DataMember]
         public List<Product> Products { get; set; }
