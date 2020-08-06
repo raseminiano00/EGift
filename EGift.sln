@@ -23,9 +23,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{C1012185-200
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{73D85B3F-2504-4A7F-980F-D58C6BA812F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EGift.Services.Orders", "EGift.Services.Orders\EGift.Services.Orders.csproj", "{3F629F9D-E0F7-42A3-96BC-4960152BD815}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EGift.Services.Orders", "EGift.Services.Orders\EGift.Services.Orders.csproj", "{3F629F9D-E0F7-42A3-96BC-4960152BD815}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EGift.Services.Orders.Tests", "EGift.Services.Orders.Tests\EGift.Services.Orders.Tests.csproj", "{0AE69E60-8A60-4613-B9AC-DE621D32257A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EGift.Services.Orders.Tests", "EGift.Services.Orders.Tests\EGift.Services.Orders.Tests.csproj", "{0AE69E60-8A60-4613-B9AC-DE621D32257A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -12,7 +12,6 @@
 
         public SearchOrderResponse()
         {
-            Order = new Order();
         }
     }
 }

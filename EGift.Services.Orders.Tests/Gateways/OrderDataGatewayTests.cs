@@ -70,7 +70,7 @@
         }
 
         [TestMethod]
-        public void SearchOrderAsync_ShouldHaveValue()
+        public void SearchOrderAsync_ShouldNull()
         {
             this.mockFactory.Setup(m => m.CreateSearchOrderCommand(It.IsAny<OrderEntity>())).Returns(new SqlCommand());
             this.mockSqlHelper.Setup(m => m.ExecuteReaderAsync(It.IsAny<SqlCommand>())).Returns(Task.FromResult(new System.Data.DataTable()));
@@ -80,7 +80,7 @@
                 Order = new Order()
             }).Result;
 
-            Assert.IsNotNull(result.Order);
+            Assert.IsNull(result.Order);
         }
     }
 }

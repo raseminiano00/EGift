@@ -1,9 +1,9 @@
-﻿namespace EGift.Api.Models.Merchants
+﻿namespace EGift.Api.Models.Orders
 {
     using System;
     using Newtonsoft.Json;
 
-    public class MerchantProductWebModel
+    public class NewOrderWebModel
     {
         [JsonProperty("id")]
         public Guid id { get; set; }
@@ -16,6 +16,5 @@
 
         [JsonProperty("price")]
         public double price { get; set; }
-
     }
 }

@@ -45,7 +45,7 @@
             var result = new NewOrderResponse();
             foreach (DataRow row in data.Rows)
             {
-                result.checkRow = Convert.ToInt32(row.ItemArray[0].ToString());
+                result.checkRow += Convert.ToInt32(row.ItemArray[0].ToString());
                 result.Successful = true;
             }
             return result;
