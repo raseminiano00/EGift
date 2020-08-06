@@ -10,3 +10,4 @@ C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Orders.Tests\Debug\netcoreapp3.1\EGift.Services.Orders.Tests.csproj.CopyComplete
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Orders.Tests\Debug\netcoreapp3.1\EGift.Services.Orders.Tests.dll
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Orders.Tests\Debug\netcoreapp3.1\EGift.Services.Orders.Tests.genruntimeconfig.cache
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Services.Orders.Tests\Debug\netcoreapp3.1\EGift.Services.Orders.Tests.csprojAssemblyReference.cache

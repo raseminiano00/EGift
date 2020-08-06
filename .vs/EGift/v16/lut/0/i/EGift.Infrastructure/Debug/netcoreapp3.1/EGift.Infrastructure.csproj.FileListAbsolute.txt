@@ -4,3 +4,4 @@ C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Infrastructure\Debug\netcoreapp3.1\EGift.Infrastructure.AssemblyInfo.cs
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Infrastructure\Debug\netcoreapp3.1\EGift.Infrastructure.csproj.CopyComplete
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Infrastructure\Debug\netcoreapp3.1\EGift.Infrastructure.dll
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Infrastructure\Debug\netcoreapp3.1\EGift.Infrastructure.csprojAssemblyReference.cache

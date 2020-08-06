@@ -27,6 +27,15 @@ namespace EGift.Services.Orders.Data.Factories
         {
             var result = CreateStoredProcCommand("sp_InsertNewOrder");
 
+            result.Parameters.AddWithValue("@ProductId", order.ProductId);
+            result.Parameters.AddWithValue("@OrderedQuantity", order.OrderQuantity);
+            result.Parameters.AddWithValue("@TotalOrderedAmount", order.TotalOrderedAmount);
+            result.Parameters.AddWithValue("@RecipientName", order.RecipientName);
+            result.Parameters.AddWithValue("@RecipientEmail", order.RecipientEmail);
+            result.Parameters.AddWithValue("@SenderName", order.SenderName);
+            result.Parameters.AddWithValue("@SenderEmail", order.SenderEmail);
+            result.Parameters.AddWithValue("@AdditionalMes", order.AdditionalMessage);
+
             return result;
         }
     }

@@ -14,3 +14,4 @@ C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Api\netcoreapp3.1\staticwebassets\EGift.Api.StaticWebAssets.xml
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Api\netcoreapp3.1\EGift.Api.dll
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Api\netcoreapp3.1\EGift.Api.genruntimeconfig.cache
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\.vs\EGift\v16\lut\0\i\EGift.Api\netcoreapp3.1\EGift.Api.csprojAssemblyReference.cache

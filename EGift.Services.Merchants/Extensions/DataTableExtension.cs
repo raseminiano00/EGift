@@ -20,6 +20,7 @@
                     Slug = row.ItemArray[3].ToString()
                 };
                 result.Merchants.Add(merchant);
+                result.Successful = true;
             }
 
             return result;

@@ -6,23 +6,18 @@
     [DataContract]
     public class Order
     {
+
         [DataMember]
         public Guid Id { get; set; }
+
+        [DataMember]
+        public OrderProduct OrderProduct { get; set; }
 
         [DataMember]
         public string MerchantName { get; set; }
 
         [DataMember]
-        public string ProductCode { get; set; }
-
-        [DataMember]
-        public string ProductDescription { get; set; }
-
-        [DataMember]
-        public double Price { get; set; }
-
-        [DataMember]
-        public string OrderQuantity { get; set; }
+        public double TotalOrderedAmount { get; set; }
 
         [DataMember]
         public string SenderName { get; set; }

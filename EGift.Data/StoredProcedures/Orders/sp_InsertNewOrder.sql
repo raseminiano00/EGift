@@ -8,7 +8,14 @@
 	@SenderEmail NVARCHAR(MAX),
 	@AdditionalMes NVARCHAR(MAX)
 AS
+	DECLARE @check int;
+
+	SET @check = 0;
+
 	INSERT INTO Orders (ProductId,OrderedQuantity,TotalOrderedAmount,RecipientName,RecipientEmailAddress,SenderName,SenderEmailAddress,AdditionalMessage) values
 	(@ProductId,@OrderedQuantity,@TotalOrderedAmount,@RecipientName,@RecipientEmail,@SenderName,@SenderEmail,@AdditionalMes);
 	
+	if(@@ROWCOUNT>0) SET @check=1;
+
+	SELECT @check;
 RETURN 0
