@@ -2,6 +2,7 @@ namespace EGift.Services.Merchants.Tests
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
+    using EGift.Infrastructure.Common;
     using EGift.Services.Merchants.Data.Entities;
     using EGift.Services.Merchants.Data.Gateways;
     using EGift.Services.Merchants.Exceptions;
@@ -15,12 +16,14 @@ namespace EGift.Services.Merchants.Tests
     {
         private MerchantService sut;
         private Mock<IMerchantDataGateway> mockGateway;
+        private Mock<IResponseHandlerFacade> mockResponseHandler;
 
         [TestInitialize]
         public void Initialize()
         {
             this.mockGateway = new Mock<IMerchantDataGateway>();
-            this.sut = new MerchantService(this.mockGateway.Object);
+            this.mockResponseHandler = new Mock<IResponseHandlerFacade>();
+            this.sut = new MerchantService(this.mockGateway.Object, this.mockResponseHandler.Object);
         }
 
         [TestMethod]
@@ -37,19 +40,6 @@ namespace EGift.Services.Merchants.Tests
             var result = this.sut.GetAllMerchantAsync().Result;
 
             Assert.IsInstanceOfType(result, typeof(GetAllMerchantResponse));
-        }
-
-        [TestMethod]
-        public void GetAllMerchant_ShouldCode404()
-        {
-            this.mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns(Task.FromResult(new GetAllMerchantResponse() 
-            {
-                Code = 404
-            }));
-
-            var result = this.sut.GetAllMerchantAsync().Result;
-
-            Assert.AreEqual(result.Code, 404);
         }
 
         [TestMethod]
