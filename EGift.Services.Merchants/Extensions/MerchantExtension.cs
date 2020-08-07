@@ -22,10 +22,10 @@
         {
             var result = new MerchantEntity()
             {
-                Id = request.merchant.Id,
-                Name = request.merchant.Name,
-                Address = request.merchant.Address,
-                Slug = request.merchant.Slug
+                Id = request.Merchant.Id,
+                Name = request.Merchant.Name,
+                Address = request.Merchant.Address,
+                Slug = request.Merchant.Slug
             };
             return result;
         }

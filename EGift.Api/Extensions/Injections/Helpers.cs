@@ -1,9 +1,9 @@
 ﻿namespace EGift.Api.Extensions.Injection
 {
     using System.Data.SqlClient;
-    using Microsoft.Extensions.DependencyInjection;
     using EGift.Infrastructure.Helpers;
-    
+    using Microsoft.Extensions.DependencyInjection;
+
     public static class Helpers
     {
         public static void InjectHelpers(this IServiceCollection services)

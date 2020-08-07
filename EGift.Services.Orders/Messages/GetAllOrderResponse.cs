@@ -8,13 +8,12 @@
     [DataContract]
     public class GetAllOrderResponse : Response
     {
-        [DataMember]
-        public List<Order> Orders { get; set; }
-
         public GetAllOrderResponse()
         {
             this.Orders = new List<Order>();
         }
 
+        [DataMember]
+        public List<Order> Orders { get; set; }
     }
 }

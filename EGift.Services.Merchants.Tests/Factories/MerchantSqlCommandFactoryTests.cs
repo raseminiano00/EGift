@@ -12,7 +12,7 @@
     [TestClass]
     public class MerchantSqlCommandFactoryTests : MerchantSqlFactory
     {
-        MerchantSqlFactory sut;
+        private MerchantSqlFactory sut;
 
         [TestInitialize]
         public void Intialize()
@@ -49,7 +49,5 @@
         {
             Assert.AreEqual(this.sut.CreateGetMerchantProduct(new MerchantEntity()).CommandText, "sp_GetMerchantProducts");
         }
-
-       
     }
 }

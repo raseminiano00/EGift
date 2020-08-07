@@ -6,8 +6,8 @@
 
     [TestClass]
     public class OrderSqlFactoryTests
-    { 
-        OrderSqlFactory sut;
+    {
+        private OrderSqlFactory sut;
         [TestInitialize]
         public void Initialize()
         {

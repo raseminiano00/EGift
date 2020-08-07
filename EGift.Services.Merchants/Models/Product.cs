@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace EGift.Services.Merchants.Models
+﻿namespace EGift.Services.Merchants.Models
 {
+    using System;
     using System.Runtime.Serialization;
 
     [DataContract]

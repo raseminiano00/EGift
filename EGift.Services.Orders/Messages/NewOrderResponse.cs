@@ -7,6 +7,6 @@
     public class NewOrderResponse : Response
     {
         [DataMember]
-        public int checkRow { get; set; }
+        public int CheckRow { get; set; }
     }
 }

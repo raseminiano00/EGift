@@ -1,19 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using EGift.Api.Extensions.Injection;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-
 namespace EGift.Api
 {
+    using EGift.Api.Extensions.Injection;
+    using EGift.Api.Extensions.Injections;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Hosting;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -27,6 +22,7 @@ namespace EGift.Api
         {
             services.InjectMerchantService();
             services.InjectHelpers();
+            services.InjectOrderServices();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
         }
 

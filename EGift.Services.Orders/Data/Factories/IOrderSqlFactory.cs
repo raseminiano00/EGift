@@ -1,11 +1,8 @@
-﻿using EGift.Services.Orders.Data.Entities;
-using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Text;
-
-namespace EGift.Services.Orders.Data.Factories
+﻿namespace EGift.Services.Orders.Data.Factories
 {
+    using System.Data.SqlClient;
+    using EGift.Services.Orders.Data.Entities;
+
     public interface IOrderSqlFactory 
     {
         SqlCommand CreateGetAllOrdersCommand();

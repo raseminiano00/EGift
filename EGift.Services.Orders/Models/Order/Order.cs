@@ -6,7 +6,6 @@
     [DataContract]
     public class Order
     {
-
         [DataMember]
         public Guid Id { get; set; }
 

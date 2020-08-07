@@ -13,8 +13,8 @@ namespace EGift.Services.Merchants.Tests
     [TestClass]
     public class MerchantServiceTests
     {
-        MerchantService sut;
-        Mock<IMerchantDataGateway> mockGateway;
+        private MerchantService sut;
+        private Mock<IMerchantDataGateway> mockGateway;
 
         [TestInitialize]
         public void Initialize()
@@ -22,11 +22,13 @@ namespace EGift.Services.Merchants.Tests
             this.mockGateway = new Mock<IMerchantDataGateway>();
             this.sut = new MerchantService(this.mockGateway.Object);
         }
+
         [TestMethod]
         public void Constructor_ShouldSet_Gateway()
         {
             Assert.IsNotNull(this.sut);
         }
+
         [TestMethod]
         public void GetAllMerchant_ShouldNotNull()
         {
@@ -40,7 +42,9 @@ namespace EGift.Services.Merchants.Tests
         [TestMethod]
         public void GetAllMerchant_ShouldCode404()
         {
-            this.mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns(Task.FromResult(new GetAllMerchantResponse() { Code = 404
+            this.mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns(Task.FromResult(new GetAllMerchantResponse() 
+            {
+                Code = 404
             }));
 
             var result = this.sut.GetAllMerchantAsync().Result;
@@ -54,7 +58,11 @@ namespace EGift.Services.Merchants.Tests
             this.mockGateway.Setup(m => m.GetAllMerchantAsync()).Returns(Task.FromResult(new GetAllMerchantResponse() 
             { 
                 Code = 200,
-                Merchants = new List<Merchant>() { new Merchant() { Id = new System.Guid("00000000-0000-0000-0000-000000000000"), Name = "Mcdo", Address = "PNOVAL"
+                Merchants = new List<Merchant>() 
+                { 
+                    new Merchant() 
+                    { 
+                        Id = new System.Guid("00000000-0000-0000-0000-000000000000"), Name = "Mcdo", Address = "PNOVAL"
                     } 
                 } 
             }));
@@ -75,7 +83,7 @@ namespace EGift.Services.Merchants.Tests
 
             var result = this.sut.GetMerchantProductsAsync(new GetMerchantProductsRequest() 
             {
-                merchant = new Merchant()
+                Merchant = new Merchant()
             }).Result;
 
             Assert.AreEqual(result.Products.Count, 0);
@@ -89,7 +97,5 @@ namespace EGift.Services.Merchants.Tests
 
             await this.sut.GetAllMerchantAsync();
         }
-
-
     }
 }

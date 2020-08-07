@@ -1,12 +1,9 @@
-﻿using EGift.Api.Models.Merchants;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace EGift.Api.Messages.Merchants
+﻿namespace EGift.Api.Messages.Merchants
 {
+    using System.Collections.Generic;
+    using EGift.Api.Models.Merchants;
+    using Newtonsoft.Json;
+
     public class GetAllMerchantWebResponse
     {
         public GetAllMerchantWebResponse()

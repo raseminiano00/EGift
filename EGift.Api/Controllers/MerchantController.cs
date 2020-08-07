@@ -33,14 +33,17 @@
         [Route("api/merchant/{slug}")]
         public async Task<ActionResult> GetMerchantProduct(string slug)
         {
-            var serviceResult = await this.merchantService.GetMerchantProductsAsync(new GetMerchantProductsRequest() { merchant = new Merchant() { Slug = slug
-                }
+            var serviceResult = await this.merchantService.GetMerchantProductsAsync(new GetMerchantProductsRequest() 
+            {
+                Merchant = new Merchant() 
+            {
+                Slug = slug
+            }
             });
 
             var result = serviceResult.AsResponse();
 
             return this.Ok(result);
         }
-
     }
 }

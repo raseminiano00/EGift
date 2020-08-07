@@ -1,8 +1,8 @@
-﻿using EGift.Api.Models.Merchants;
-using Newtonsoft.Json;
-
-namespace EGift.Api.Messages.Merchants
+﻿namespace EGift.Api.Messages.Merchants
 {
+    using EGift.Api.Models.Merchants;
+    using Newtonsoft.Json;
+
     public class GetMerchantProductWebRequest
     {
         [JsonProperty("data")]

@@ -1,10 +1,10 @@
 ﻿namespace EGift.Services.Orders
 {
-    using EGift.Services.Orders.Messages;
     using System;
     using System.Collections.Generic;
     using System.Text;
     using System.Threading.Tasks;
+    using EGift.Services.Orders.Messages;
 
     public interface IOrderService
     {
@@ -12,6 +12,6 @@
 
         Task<GetAllOrderResponse> GetAllOrderAsync();
 
-        Task<SearchOrderResponse> SearchOrderAsync(SearchOrderRequest request);
+        Task<SearchOrderResponse> SearchOrderAsync(SearchOrderRequest id);
     }
 }

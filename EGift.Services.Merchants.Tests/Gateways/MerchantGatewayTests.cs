@@ -1,23 +1,21 @@
-﻿using EGift.Infrastructure.Helpers;
-using EGift.Services.Merchants.Data.Entities;
-using EGift.Services.Merchants.Data.Factories;
-using EGift.Services.Merchants.Data.Gateways;
-using EGift.Services.Merchants.Exceptions;
-using EGift.Services.Merchants.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
-using System.Data;
-using System.Data.SqlClient;
-using System.Threading.Tasks;
-
-namespace EGift.Services.Merchants.Tests.Gateways
+﻿namespace EGift.Services.Merchants.Tests.Gateways
 {
+    using System.Data.SqlClient;
+    using System.Threading.Tasks;
+    using EGift.Infrastructure.Helpers;
+    using EGift.Services.Merchants.Data.Entities;
+    using EGift.Services.Merchants.Data.Factories;
+    using EGift.Services.Merchants.Data.Gateways;
+    using EGift.Services.Merchants.Exceptions;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Moq;
+
     [TestClass]
     public class MerchantGatewayTests
     {
-        MerchantDataGateway sut;
-        Mock<IMerchantSqlFactory> mockFactory;
-        Mock<ISqlHelper> mockHelper;
+        private MerchantDataGateway sut;
+        private Mock<IMerchantSqlFactory> mockFactory;
+        private Mock<ISqlHelper> mockHelper;
 
         [TestInitialize]
         public void Initialize()
@@ -26,7 +24,6 @@ namespace EGift.Services.Merchants.Tests.Gateways
             this.mockHelper = new Mock<ISqlHelper>();
             this.sut = new MerchantDataGateway(this.mockFactory.Object, this.mockHelper.Object);
         }
-
 
         [TestMethod]
         public void Constructor_ShouldAccept_WhenArgIsValid()
@@ -37,6 +34,7 @@ namespace EGift.Services.Merchants.Tests.Gateways
 
             Assert.IsNotNull(this.sut);
         }
+
         [TestMethod]
         [ExpectedException(typeof(MerchantGatewayException))]
         public void Constructor_ShouldThrow_WhenArgIsNull()

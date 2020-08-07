@@ -1,14 +1,10 @@
 ﻿namespace EGift.Services.Orders
 {
+    using System;
+    using System.Threading.Tasks;
     using EGift.Services.Orders.Data.Gateways;
     using EGift.Services.Orders.Exceptions;
-    using EGift.Services.Orders.Extensions;
     using EGift.Services.Orders.Messages;
-    using System;
-    using System.Collections.Generic;
-    using System.Runtime.InteropServices;
-    using System.Text;
-    using System.Threading.Tasks;
 
     public class OrderService : IOrderService
     {
@@ -16,7 +12,7 @@
 
         public OrderService(IOrderDataGateway gateway)
         {
-            if(gateway == null)
+            if (gateway == null)
             {
                 throw new OrderServiceException(new Exception());
             }
@@ -30,7 +26,7 @@
             try
             {
                 result = await this.gateway.GetAllOrderAsync();
-                if(result.Orders == null)
+                if (result.Orders == null)
                 {
                     result.Code = 204;
                 }
@@ -42,6 +38,7 @@
                 {
                     result.Code = 200;
                 }
+
                 return result;
             }
             catch (Exception ex)
@@ -56,14 +53,15 @@
             try
             {
                 result = await this.gateway.NewOrderAsync(request);
-                if(result.checkRow == 0)
+                if (result.CheckRow == 0)
                 {
                     result.Code = 404;
                 }
-                else if(result.checkRow > 0)
+                else if (result.CheckRow > 0)
                 {
                     result.Code = 201;
                 }
+
                 return result;
             }
             catch (Exception ex)
@@ -90,6 +88,7 @@
                 {
                     result.Code = 200;
                 }
+
                 return result;
             }
             catch (Exception ex)

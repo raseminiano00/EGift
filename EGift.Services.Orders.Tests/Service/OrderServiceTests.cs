@@ -1,23 +1,20 @@
 ﻿namespace EGift.Services.Orders.Tests.Service
 {
-    using EGift.Services.Orders.Data.Entities;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
     using EGift.Services.Orders.Data.Gateways;
     using EGift.Services.Orders.Exceptions;
     using EGift.Services.Orders.Messages;
     using EGift.Services.Orders.Models.Order;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
-    using System.Threading.Tasks;
 
     [TestClass]
     public class OrderServiceTests
     {
-        OrderService sut;
-        Mock<IOrderDataGateway> mockGateway;
-        List<Order> mockResult;
+        private OrderService sut;
+        private Mock<IOrderDataGateway> mockGateway;
+        private List<Order> mockResult;
         [TestInitialize]
         public void Initialize()
         {
@@ -42,7 +39,7 @@
         {
             this.mockGateway.Setup(m => m.GetAllOrderAsync()).Returns(Task.FromResult(new GetAllOrderResponse()
             {
-                Orders = mockResult
+                Orders = this.mockResult
             }));
 
             var result = this.sut.GetAllOrderAsync().Result;
@@ -55,7 +52,7 @@
         {
             this.mockGateway.Setup(m => m.NewOrderAsync(It.IsAny<NewOrderRequest>())).Returns(Task.FromResult(new NewOrderResponse()
             {
-                checkRow = 0
+                CheckRow = 0
             }));
 
             var result = this.sut.NewOrderAsync(It.IsAny<NewOrderRequest>()).Result;
@@ -68,7 +65,7 @@
         {
             this.mockGateway.Setup(m => m.NewOrderAsync(It.IsAny<NewOrderRequest>())).Returns(Task.FromResult(new NewOrderResponse()
             {
-                checkRow = 1
+                CheckRow = 1
             }));
 
             var result = this.sut.NewOrderAsync(It.IsAny<NewOrderRequest>()).Result;

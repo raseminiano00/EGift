@@ -1,22 +1,20 @@
 ﻿namespace EGift.Api.Models.Merchants
 {
-
-    using Newtonsoft.Json;
     using System;
+    using Newtonsoft.Json;
 
     public class MerchantWebModel
     {
         [JsonProperty("id")]
-        public Guid id { get; set; }
+        public Guid Id { get; set; }
 
         [JsonProperty("name")]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         [JsonProperty("address")]
-        public string address { get; set; }
+        public string Address { get; set; }
 
         [JsonProperty("slug")]
-        public string slug { get; set; }
-
+        public string Slug { get; set; }
     }
 }

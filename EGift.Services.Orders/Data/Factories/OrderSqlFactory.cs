@@ -1,12 +1,9 @@
-﻿using EGift.Infrastructure.Common;
-using EGift.Services.Orders.Data.Entities;
-using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Text;
-
-namespace EGift.Services.Orders.Data.Factories
+﻿namespace EGift.Services.Orders.Data.Factories
 {
+    using System.Data.SqlClient;
+    using EGift.Infrastructure.Common;
+    using EGift.Services.Orders.Data.Entities;
+
     public class OrderSqlFactory : AbstractSqlFactory, IOrderSqlFactory
     {
         public SqlCommand CreateGetAllOrdersCommand()
@@ -19,6 +16,8 @@ namespace EGift.Services.Orders.Data.Factories
         public SqlCommand CreateSearchOrderCommand(OrderEntity order)
         {
             var result = CreateStoredProcCommand("sp_SearchOrder");
+
+            result.Parameters.AddWithValue("@OrderId", order.Id);
 
             return result;
         }

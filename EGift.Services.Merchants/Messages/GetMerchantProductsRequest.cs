@@ -6,6 +6,6 @@
     public class GetMerchantProductsRequest
     {
         [DataMember]
-        public Merchant merchant { get; set; }
+        public Merchant Merchant { get; set; }
     }
 }

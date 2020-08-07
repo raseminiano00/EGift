@@ -1,11 +1,12 @@
 ﻿namespace EGift.Api.Controllers
 {
+    using System;
+    using System.Threading.Tasks;
+    using EGift.Api.Extensions.Orders;
+    using EGift.Api.Messages.Orders;
     using EGift.Services.Orders;
     using Microsoft.AspNetCore.Mvc;
-    using System.Runtime.CompilerServices;
-    using System.Threading.Tasks;
 
-    [Route("api/[controller]")]
     [ApiController]
     public class OrderController : ControllerBase
     {
@@ -16,16 +17,37 @@
             this.orderService = orderService;
         }
 
-        [HttpPost]
         [Route("api/[controller]")]
-        public async Task<ActionResult> NewOrder()
+        [HttpPost]
+        public async Task<ActionResult> NewOrder([FromBody]NewOrderWebRequest request)
         {
-            var serviceResult = await this.orderService.NewOrderAsync();
+            var serviceResult = await this.orderService.NewOrderAsync(request.AsServiceRequest());
 
-            var result = serviceResult.AsResponse();
+            var result = serviceResult.AsApiResponse();
 
             return this.Ok(result);
         }
 
+        [Route("api/[controller]s")]
+        [HttpGet]
+        public async Task<ActionResult> GetAllOrders()
+        {
+            var serviceResult = await this.orderService.GetAllOrderAsync();
+
+            var result = serviceResult.AsApiResponse();
+
+            return this.Ok(result);
+        }
+
+        [Route("api/order/{id}")]
+        [HttpGet]
+        public async Task<SearchOrderWebResponse> SearchOrder(string id)
+        {
+            var serviceResult = await this.orderService.SearchOrderAsync(id.AsServiceRequest());
+
+            var result = serviceResult.AsApiResponse();
+
+            return result;
+        }
     }
 }

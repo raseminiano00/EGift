@@ -15,9 +15,9 @@
     [TestClass]
     public class OrderDataGatewayTests
     {
-        OrderDataGateway sut;
-        Mock<IOrderSqlFactory> mockFactory;
-        Mock<ISqlHelper> mockSqlHelper;
+        private OrderDataGateway sut;
+        private Mock<IOrderSqlFactory> mockFactory;
+        private Mock<ISqlHelper> mockSqlHelper;
 
         [TestInitialize]
         public void Initialize()
@@ -38,7 +38,7 @@
         [ExpectedException(typeof(OrderDataGatewayException))]
         public void Constructor_ShouldThrowException()
         {
-            this.sut = new OrderDataGateway(null,null);
+            this.sut = new OrderDataGateway(null, null);
         }
 
         [TestMethod]
@@ -66,7 +66,7 @@
                 } 
             }).Result;
 
-            Assert.AreEqual(result.checkRow, 0);
+            Assert.AreEqual(result.CheckRow, 0);
         }
 
         [TestMethod]

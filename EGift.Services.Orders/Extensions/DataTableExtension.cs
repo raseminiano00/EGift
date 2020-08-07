@@ -14,7 +14,7 @@
         {
             var result = new GetAllOrderResponse();
             Order orderData;
-            foreach(DataRow row in data.Rows)
+            foreach (DataRow row in data.Rows)
             {
                 orderData = new Order()
                 {
@@ -29,6 +29,7 @@
                     TotalOrderedAmount = Convert.ToDouble(row.ItemArray[6].ToString()),
                     OrderProduct = new OrderProduct() 
                     {
+                        Id = new Guid(row.ItemArray[13].ToString()),
                         Name = row.ItemArray[2].ToString(),
                         Description = row.ItemArray[3].ToString(),
                         Price = Convert.ToDouble(row.ItemArray[4].ToString()),
@@ -38,18 +39,22 @@
                 result.Orders.Add(orderData);
                 result.Successful = true;
             }
+
             return result;
         }
+
         public static NewOrderResponse AsNewOrderResponse(this DataTable data)
         {
             var result = new NewOrderResponse();
             foreach (DataRow row in data.Rows)
             {
-                result.checkRow += Convert.ToInt32(row.ItemArray[0].ToString());
+                result.CheckRow += Convert.ToInt32(row.ItemArray[0].ToString());
                 result.Successful = true;
             }
+
             return result;
         }
+
         public static SearchOrderResponse AsSearchOrderResponse(this DataTable data)
         {
             var result = new SearchOrderResponse();
@@ -78,6 +83,7 @@
                 result.Order = orderData;
                 result.Successful = true;
             }
+
             return result;
         }
     }

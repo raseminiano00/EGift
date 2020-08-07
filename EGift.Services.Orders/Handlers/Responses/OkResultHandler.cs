@@ -1,10 +1,7 @@
-﻿using EGift.Infrastructure.Common;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace EGift.Services.Orders.Handlers.Responses
+﻿namespace EGift.Services.Orders.Handlers.Responses
 {
+    using EGift.Infrastructure.Common;
+
     public class OkResultHandler<T> : BaseHandler<T> where T : Response
     {
         public override T Handle(T request)

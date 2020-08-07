@@ -15,10 +15,11 @@
 
         public OrderDataGateway(IOrderSqlFactory factory, ISqlHelper sqlHelper)
         {
-            if(factory == null || sqlHelper == null)
+            if (factory == null || sqlHelper == null)
             {
                 throw new OrderDataGatewayException(new Exception());
             }
+
             this.sqlHelper = sqlHelper;
             this.factory = factory;
         }
@@ -49,7 +50,6 @@
             }
             catch (Exception ex)
             {
-
                 throw new OrderDataGatewayException(ex);
             }
         }
@@ -66,7 +66,6 @@
             }
             catch (Exception ex)
             {
-
                 throw new OrderDataGatewayException(ex);
             }
         }

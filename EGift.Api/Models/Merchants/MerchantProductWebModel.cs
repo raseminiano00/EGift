@@ -6,16 +6,15 @@
     public class MerchantProductWebModel
     {
         [JsonProperty("id")]
-        public Guid id { get; set; }
+        public Guid Id { get; set; }
 
         [JsonProperty("name")]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         [JsonProperty("description")]
-        public string description { get; set; }
+        public string Description { get; set; }
 
         [JsonProperty("price")]
-        public double price { get; set; }
-
+        public double Price { get; set; }
     }
 }

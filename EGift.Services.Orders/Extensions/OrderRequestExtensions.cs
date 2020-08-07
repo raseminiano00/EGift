@@ -1,10 +1,10 @@
 ﻿namespace EGift.Services.Orders.Extensions
 {
-    using EGift.Services.Orders.Data.Entities;
-    using EGift.Services.Orders.Messages;
     using System;
     using System.Collections.Generic;
     using System.Text;
+    using EGift.Services.Orders.Data.Entities;
+    using EGift.Services.Orders.Messages;
 
     public static class OrderRequestExtensions
     {

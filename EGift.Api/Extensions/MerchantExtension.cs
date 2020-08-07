@@ -18,6 +18,7 @@
 
             return result;
         }
+
         public static GetMerchantProductsRequest AsRequest(this GetMerchantProductWebRequest request)
         {
             if (request is null)
@@ -27,22 +28,23 @@
 
             var result = new GetMerchantProductsRequest()
             {
-                merchant = new Merchant
+                Merchant = new Merchant
                 {
-                    Slug = request.Data.slug
+                    Slug = request.Data.Slug
                 }
             };
 
             return result;
         }
+
         public static MerchantWebModel AsResponse(this Merchant merchant)
         {
             var result = new MerchantWebModel()
             {
-                id = merchant.Id,
-                name = merchant.Name,
-                address = merchant.Address,
-                slug = merchant.Slug
+                Id = merchant.Id,
+                Name = merchant.Name,
+                Address = merchant.Address,
+                Slug = merchant.Slug
             };
             return result;
         }
@@ -51,10 +53,10 @@
         {
             var result = new MerchantProductWebModel()
             {
-                id = product.Id,
-                name = product.Name,
-                description = product.Description,
-                price = product.Price
+                Id = product.Id,
+                Name = product.Name,
+                Description = product.Description,
+                Price = product.Price
             };
             return result;
         }
