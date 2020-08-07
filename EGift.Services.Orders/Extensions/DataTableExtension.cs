@@ -37,7 +37,6 @@
                     }
                 };
                 result.Orders.Add(orderData);
-                result.Successful = true;
             }
 
             return result;

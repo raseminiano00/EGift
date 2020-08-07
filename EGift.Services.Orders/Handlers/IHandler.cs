@@ -2,7 +2,7 @@
 {
     public interface IHandler<T>
     {
-        T Handle(T toHandle);
+        void Handle(ref T toHandle);
 
         void SetNextHandler(IHandler<T> nextHandler);
     }

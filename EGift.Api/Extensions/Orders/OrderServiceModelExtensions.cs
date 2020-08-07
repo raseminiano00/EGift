@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using EGift.Api.Messages.Orders;
     using EGift.Api.Models.Orders;
+    using EGift.Infrastructure.Common;
     using EGift.Services.Orders.Messages;
     using EGift.Services.Orders.Models.Order;
     using Microsoft.AspNetCore.Mvc.Filters;
@@ -15,14 +16,14 @@
         {
             var result = new NewOrderWebResponse()
             {
-                IsSuccess = response.Successful,
+                IsSuccess = response.Data.Successful,
                 HttpCode = response.Code
 
             };
             return result;
         }
 
-        public static GetAllOrderWebResponse AsApiResponse(this GetAllOrderResponse response)
+        public static GetAllOrderWebResponse AsApiResponse(this Response<GetAllOrderResponse> response)
         {
             var result = new GetAllOrderWebResponse();
 
@@ -33,7 +34,7 @@
             }
 
             var ordersResult = new List<OrderWebModel>();
-            foreach (Order orderServiceResponse in response.Orders)
+            foreach (Order orderServiceResponse in response.Data.)
             {
                 var orderWebModel = orderServiceResponse.AsApiResponse();
                 ordersResult.Add(orderWebModel);

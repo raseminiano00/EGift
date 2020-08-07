@@ -6,7 +6,7 @@
     using EGift.Services.Orders.Models.Order;
 
     [DataContract]
-    public class GetAllOrderResponse : Response
+    public class GetAllOrderResponse
     {
         public GetAllOrderResponse()
         {

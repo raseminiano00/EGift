@@ -2,16 +2,17 @@
 {
     using EGift.Infrastructure.Common;
 
-    public class OkResultHandler<T> : BaseHandler<T> where T : Response
+    public class OkResultHandler<T> : BaseHandler<T> where T : Response<T>
     {
-        public override T Handle(T request)
+        public override void Handle(T request)
         {
-            if (request.Successful) 
+            if (request.Data.Count > 0) 
             {
                 request.Code = 200;
+                return;
             }
 
-            return request;
+            Next(ref request);
         }
     }
 }

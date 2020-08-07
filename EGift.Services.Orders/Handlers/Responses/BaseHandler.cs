@@ -5,7 +5,6 @@
     public abstract class BaseHandler<T> : IHandler<T>
     {
         private IHandler<T> nextHandler;
-        private T toHandle;
 
         public void SetNextHandler(IHandler<T> nextHandler)
         {
@@ -17,7 +16,17 @@
             this.nextHandler = nextHandler;
         }
 
-        public abstract T Handle(T request);
+        public void Next(ref T request)
+        {
+            if (this.IsNull(nextHandler))
+            {
+                return;
+            }
+
+            nextHandler.Handle(ref request);
+        }
+
+        public abstract void Handle(ref T request);
 
         protected bool IsNull(object toCheck)
         {
