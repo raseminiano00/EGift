@@ -4,7 +4,7 @@
     using System.Runtime.Serialization;
 
     [DataContract]
-    public class Response<T> 
+    public class Response 
     {
         public Response()
         {
@@ -16,8 +16,5 @@
 
         [DataMember]
         public bool Successful { get; set; }
-
-        [DataMember]
-        T Data { get; set; }
     }
 }

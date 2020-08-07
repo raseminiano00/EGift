@@ -26,18 +26,19 @@
             try
             {
                 result = await this.gateway.GetAllOrderAsync();
-                //if (result.Orders == null)
-                //{
-                //    result. = 204;
-                //}
-                //else if (result.Successful == false)
-                //{
-                //    result.Code = 404;
-                //}
-                //else
-                //{
-                //    result.Code = 200;
-                //}
+                if (result.Orders == null)
+                {
+                    result.Code = 204;
+                }
+                else if (result.Successful == false)
+                {
+                    result.Code = 404;
+                }
+                else
+                {
+                    result.Code = 200;
+                }
+
                 return result;
             }
             catch (Exception ex)
@@ -52,14 +53,14 @@
             try
             {
                 result = await this.gateway.NewOrderAsync(request);
-                //if (result.CheckRow == 0)
-                //{
-                //    result.Code = 404;
-                //}
-                //else if (result.CheckRow > 0)
-                //{
-                //    result.Code = 201;
-                //}
+                if (result.CheckRow == 0)
+                {
+                    result.Code = 404;
+                }
+                else if (result.CheckRow > 0)
+                {
+                    result.Code = 201;
+                }
 
                 return result;
             }
@@ -75,18 +76,18 @@
             try
             {
                 result = await this.gateway.SearchOrderAsync(request);
-                //if (result.Successful == false)
-                //{
-                //    result.Code = 404;
-                //}
-                //else if (result.Order == null)
-                //{
-                //    result.Code = 204;
-                //}
-                //else
-                //{
-                //    result.Code = 200;
-                //}
+                if (result.Successful == false)
+                {
+                    result.Code = 404;
+                }
+                else if (result.Order == null)
+                {
+                    result.Code = 204;
+                }
+                else
+                {
+                    result.Code = 200;
+                }
 
                 return result;
             }

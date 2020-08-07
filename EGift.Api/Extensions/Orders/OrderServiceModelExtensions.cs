@@ -16,14 +16,14 @@
         {
             var result = new NewOrderWebResponse()
             {
-                IsSuccess = response.Data.Successful,
+                IsSuccess = response.Successful,
                 HttpCode = response.Code
 
             };
             return result;
         }
 
-        public static GetAllOrderWebResponse AsApiResponse(this Response<GetAllOrderResponse> response)
+        public static GetAllOrderWebResponse AsApiResponse(this GetAllOrderResponse response)
         {
             var result = new GetAllOrderWebResponse();
 
@@ -34,7 +34,7 @@
             }
 
             var ordersResult = new List<OrderWebModel>();
-            foreach (Order orderServiceResponse in response.Data.)
+            foreach (Order orderServiceResponse in response.Orders)
             {
                 var orderWebModel = orderServiceResponse.AsApiResponse();
                 ordersResult.Add(orderWebModel);
