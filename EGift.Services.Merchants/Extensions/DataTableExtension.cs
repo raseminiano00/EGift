@@ -40,6 +40,7 @@
                 };
                 result.Products.Add(product);
                 result.MerchantName = row.ItemArray[0].ToString();
+                result.Successful = true;
             }
 
             return result;

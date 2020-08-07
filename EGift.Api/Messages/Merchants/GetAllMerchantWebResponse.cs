@@ -4,7 +4,7 @@
     using EGift.Api.Models.Merchants;
     using Newtonsoft.Json;
 
-    public class GetAllMerchantWebResponse
+    public class GetAllMerchantWebResponse : WebResponse
     {
         public GetAllMerchantWebResponse()
         {

@@ -23,6 +23,18 @@
             try
             {
                 response = await this.gateway.GetAllMerchantAsync();
+                if (response.Merchants == null)
+                {
+                    response.Code = 204;
+                }
+                else if (response.Successful == false)
+                {
+                    response.Code = 404;
+                }
+                else
+                {
+                    response.Code = 200;
+                }
             }
             catch (Exception ex)
             {
@@ -39,6 +51,18 @@
             try
             {
                 response = await this.gateway.GetMerchantProductsAsync(request.AsEntity());
+                if (response.Products.Count == 0)
+                {
+                    response.Code = 204;
+                }
+                else if (response.Successful == false)
+                {
+                    response.Code = 404;
+                }
+                else
+                {
+                    response.Code = 200;
+                }
             }
             catch (Exception ex)
             {

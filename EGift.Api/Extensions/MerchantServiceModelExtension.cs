@@ -10,7 +10,8 @@
         {
             var result = new GetAllMerchantWebResponse
             {
-                Data = serviceResponse.Merchants.Select(m => m.AsResponse()).ToList()
+                Data = serviceResponse.Merchants.Select(m => m.AsResponse()).ToList(),
+                HttpCode = serviceResponse.Code
             };
 
             return result;
@@ -18,10 +19,11 @@
 
         public static GetMerchantProductWebResponse AsResponse(this GetMerchantProductResponse serviceResponse)
         {
-            var result = new GetMerchantProductWebResponse
+            var result = new GetMerchantProductWebResponse()
             {
                 Data = serviceResponse.Products.Select(m => m.AsResponse()).ToList(),
-                MerchantName = serviceResponse.MerchantName
+                MerchantName = serviceResponse.MerchantName,
+                HttpCode = serviceResponse.Code
             };
 
             return result;
