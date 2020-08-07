@@ -1,10 +1,11 @@
 ﻿namespace EGift.Infrastructure.Common
 {
     using System.Collections.Generic;
+    using System.Data;
     using System.Runtime.Serialization;
 
     [DataContract]
-    public class Response 
+    public class Response
     {
         public Response()
         {
@@ -16,5 +17,8 @@
 
         [DataMember]
         public bool Successful { get; set; }
+
+        [DataMember]
+        public DataTable RawData { get; set; }
     }
 }

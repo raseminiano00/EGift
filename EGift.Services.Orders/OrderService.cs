@@ -2,6 +2,8 @@
 {
     using System;
     using System.Threading.Tasks;
+    using EGift.Infrastructure.Common;
+    using EGift.Infrastructure.Common.ResponseHandlers;
     using EGift.Services.Orders.Data.Gateways;
     using EGift.Services.Orders.Exceptions;
     using EGift.Services.Orders.Messages;
@@ -9,15 +11,17 @@
     public class OrderService : IOrderService
     {
         private IOrderDataGateway gateway;
+        private IResponseHandlerFacade responseHandler;
 
-        public OrderService(IOrderDataGateway gateway)
+        public OrderService(IOrderDataGateway gateway,IResponseHandlerFacade responseHandler)
         {
-            if (gateway == null)
+            if (gateway == null || responseHandler == null)
             {
                 throw new OrderServiceException(new Exception());
             }
 
             this.gateway = gateway;
+            this.responseHandler = responseHandler;
         }
 
         public async Task<GetAllOrderResponse> GetAllOrderAsync()
@@ -26,18 +30,8 @@
             try
             {
                 result = await this.gateway.GetAllOrderAsync();
-                if (result.Orders == null)
-                {
-                    result.Code = 204;
-                }
-                else if (result.Successful == false)
-                {
-                    result.Code = 404;
-                }
-                else
-                {
-                    result.Code = 200;
-                }
+
+                result.Code = responseHandler.Handle(result);
 
                 return result;
             }
@@ -53,14 +47,8 @@
             try
             {
                 result = await this.gateway.NewOrderAsync(request);
-                if (result.CheckRow == 0)
-                {
-                    result.Code = 404;
-                }
-                else if (result.CheckRow > 0)
-                {
-                    result.Code = 201;
-                }
+
+                result.Code = responseHandler.Handle(result);
 
                 return result;
             }
@@ -76,24 +64,19 @@
             try
             {
                 result = await this.gateway.SearchOrderAsync(request);
-                if (result.Successful == false)
-                {
-                    result.Code = 404;
-                }
-                else if (result.Order == null)
-                {
-                    result.Code = 204;
-                }
-                else
-                {
-                    result.Code = 200;
-                }
+
+                result.Code = responseHandler.Handle(result);
 
                 return result;
             }
             catch (Exception ex)
             {
-                throw new OrderServiceException(ex);
+                Console.Write(ex.Message);
+                result = new SearchOrderResponse
+                {
+                    Code = 404
+                };
+                return result;
             }
         }
     }

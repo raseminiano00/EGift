@@ -37,6 +37,7 @@
                     }
                 };
                 result.Orders.Add(orderData);
+                result.RawData = data;
             }
 
             return result;
@@ -49,6 +50,7 @@
             {
                 result.CheckRow += Convert.ToInt32(row.ItemArray[0].ToString());
                 result.Successful = true;
+                result.RawData = data;
             }
 
             return result;
@@ -73,6 +75,7 @@
                     TotalOrderedAmount = Convert.ToDouble(row.ItemArray[6].ToString()),
                     OrderProduct = new OrderProduct()
                     {
+                        Id = new Guid(row.ItemArray[13].ToString()),
                         Name = row.ItemArray[2].ToString(),
                         Description = row.ItemArray[3].ToString(),
                         Price = Convert.ToDouble(row.ItemArray[4].ToString()),
@@ -80,7 +83,7 @@
                     }
                 };
                 result.Order = orderData;
-                result.Successful = true;
+                result.RawData = data;
             }
 
             return result;

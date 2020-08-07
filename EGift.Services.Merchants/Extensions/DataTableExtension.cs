@@ -10,6 +10,7 @@
         public static GetAllMerchantResponse AsGetAllMerchantResponse(this DataTable data)
         {
             var result = new GetAllMerchantResponse();
+            result.RawData = data;
             foreach (DataRow row in data.Rows)
             {
                 var merchant = new Merchant
@@ -29,6 +30,7 @@
         public static GetMerchantProductResponse AsGetMerchantProductsResponse(this DataTable data)
         {
             var result = new GetMerchantProductResponse();
+            result.RawData = data;
             foreach (DataRow row in data.Rows)
             {
                 var product = new Product

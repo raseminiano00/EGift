@@ -6,5 +6,8 @@
     {
         [JsonProperty("httpCode")]
         public int HttpCode { get; set; }
+
+        [JsonProperty("errorMessage")]
+        public string ErrorMessage { get; set; }
     }
 }

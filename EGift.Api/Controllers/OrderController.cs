@@ -32,22 +32,37 @@
         [HttpGet]
         public async Task<ActionResult> GetAllOrders()
         {
-            var serviceResult = await this.orderService.GetAllOrderAsync();
+            try
+            {
+                var serviceResult = await this.orderService.GetAllOrderAsync();
 
-            var result = serviceResult.AsApiResponse();
+                var result = serviceResult.AsApiResponse();
 
-            return this.Ok(result);
+                return this.Ok(result);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         [Route("api/order/{id}")]
         [HttpGet]
         public async Task<SearchOrderWebResponse> SearchOrder(string id)
         {
-            var serviceResult = await this.orderService.SearchOrderAsync(id.AsServiceRequest());
+            try
+            {
+                var serviceResult = await this.orderService.SearchOrderAsync(id.AsServiceRequest());
 
-            var result = serviceResult.AsApiResponse();
+                var result = serviceResult.AsApiResponse();
 
-            return result;
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return new SearchOrderWebResponse() { ErrorMessage = ex.Message };
+            }
         }
     }
 }
