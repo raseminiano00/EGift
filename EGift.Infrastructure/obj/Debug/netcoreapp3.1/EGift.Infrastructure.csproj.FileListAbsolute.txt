@@ -1,9 +1,9 @@
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Infrastructure\bin\Debug\netcoreapp3.1\EGift.Infrastructure.deps.json
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Infrastructure\bin\Debug\netcoreapp3.1\EGift.Infrastructure.dll
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Infrastructure\bin\Debug\netcoreapp3.1\EGift.Infrastructure.pdb
-C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Infrastructure\obj\Debug\netcoreapp3.1\EGift.Infrastructure.csprojAssemblyReference.cache
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Infrastructure\obj\Debug\netcoreapp3.1\EGift.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Infrastructure\obj\Debug\netcoreapp3.1\EGift.Infrastructure.AssemblyInfo.cs
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Infrastructure\obj\Debug\netcoreapp3.1\EGift.Infrastructure.dll
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Infrastructure\obj\Debug\netcoreapp3.1\EGift.Infrastructure.pdb
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Infrastructure\obj\Debug\netcoreapp3.1\EGift.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Infrastructure\obj\Debug\netcoreapp3.1\EGift.Infrastructure.csprojAssemblyReference.cache

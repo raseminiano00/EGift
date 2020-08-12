@@ -41,9 +41,11 @@
                 {
                     SenderEmail = webModel.SenderEmail,
                     SenderName = webModel.SenderName,
+                    SenderContactNumber = webModel.SenderContactNumber,
                     RecipientEmail = webModel.RecipientEmail,
                     RecipientName = webModel.RecipientName,
-                    TotalOrderedAmount = webModel.TotalOrderedAmount,
+                    RecipientContactNumber = webModel.RecipientContactNumber,
+                    TotalOrderedAmount = webModel.totalOrderAmount,
                     AdditionalMessage = webModel.AdditionalMessage,
                     OrderProduct = new OrderProduct() 
                     {

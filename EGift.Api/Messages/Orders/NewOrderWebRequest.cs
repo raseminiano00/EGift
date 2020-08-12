@@ -18,8 +18,8 @@
         [JsonProperty("merchantName")]
         public string MerchantName { get; set; }
 
-        [JsonProperty("totalOrderedAmount")]
-        public double TotalOrderedAmount { get; set; }
+        [JsonProperty("totalOrderAmount")]
+        public double totalOrderAmount { get; set; }
 
         [JsonProperty("senderName")]
         public string SenderName { get; set; }
@@ -27,11 +27,17 @@
         [JsonProperty("senderEmail")]
         public string SenderEmail { get; set; }
 
+        [JsonProperty("senderContactNumber")]
+        public string SenderContactNumber { get; set; }
+
         [JsonProperty("recipientName")]
         public string RecipientName { get; set; }
 
         [JsonProperty("recipientEmail")]
         public string RecipientEmail { get; set; }
+
+        [JsonProperty("recipientContactNumber")]
+        public string RecipientContactNumber { get; set; }
 
         [JsonProperty("dateOrdered")]
         public DateTime DateOrdered { get; set; }

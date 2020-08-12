@@ -25,10 +25,16 @@
         public string SenderEmail { get; set; }
 
         [DataMember]
+        public string SenderContactNumber { get; set; }
+
+        [DataMember]
         public string RecipientName { get; set; }
 
         [DataMember]
         public string RecipientEmail { get; set; }
+
+        [DataMember]
+        public string RecipientContactNumber { get; set; }
 
         [DataMember]
         public DateTime DateOrdered { get; set; }

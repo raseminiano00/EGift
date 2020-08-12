@@ -18,6 +18,8 @@
                 RecipientName = request.Order.RecipientName,
                 RecipientEmail = request.Order.RecipientEmail,
                 SenderName = request.Order.SenderName,
+                RecipientContactNumber = request.Order.RecipientContactNumber,
+                SenderContactNumber = request.Order.SenderContactNumber,
                 SenderEmail = request.Order.SenderEmail,
                 AdditionalMessage = request.Order.AdditionalMessage
             };

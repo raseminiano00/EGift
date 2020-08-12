@@ -24,11 +24,11 @@ C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Api\bin\Debug
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Api\bin\Debug\netcoreapp3.1\EGift.Services.Merchants.dll
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Api\bin\Debug\netcoreapp3.1\EGift.Services.Merchants.pdb
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Api\bin\Debug\netcoreapp3.1\EGift.Infrastructure.pdb
-C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Api\obj\Debug\netcoreapp3.1\EGift.Api.csproj.CoreCompileInputs.cache
-C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Api\obj\Debug\netcoreapp3.1\EGift.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Api\obj\Debug\netcoreapp3.1\EGift.Api.csproj.CopyComplete
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Api\obj\Debug\netcoreapp3.1\EGift.Api.dll
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Api\obj\Debug\netcoreapp3.1\EGift.Api.pdb
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Api\obj\Debug\netcoreapp3.1\EGift.Api.genruntimeconfig.cache
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Api\bin\Debug\netcoreapp3.1\EGift.Services.Orders.dll
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Api\bin\Debug\netcoreapp3.1\EGift.Services.Orders.pdb
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Api\obj\Debug\netcoreapp3.1\EGift.Api.csproj.CoreCompileInputs.cache
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Api\obj\Debug\netcoreapp3.1\EGift.Api.MvcApplicationPartsAssemblyInfo.cache

@@ -24,9 +24,13 @@
 
         public string SenderEmail { get; set; }
 
+        public string SenderContactNumber { get; set; }
+
         public string RecipientName { get; set; }
 
         public string RecipientEmail { get; set; }
+
+        public string RecipientContactNumber { get; set; }
 
         public DateTime DateOrdered { get; set; }
 

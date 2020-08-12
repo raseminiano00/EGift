@@ -24,6 +24,8 @@ namespace EGift.Api
             services.InjectHelpers();
             services.InjectOrderServices();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
+            services.AddCors(c => { c.AddDefaultPolicy(builder => builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod()); });
+            
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -41,6 +43,8 @@ namespace EGift.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthorization();
 

@@ -31,8 +31,10 @@
             result.Parameters.AddWithValue("@TotalOrderedAmount", order.TotalOrderedAmount);
             result.Parameters.AddWithValue("@RecipientName", order.RecipientName);
             result.Parameters.AddWithValue("@RecipientEmail", order.RecipientEmail);
+            result.Parameters.AddWithValue("@RecipientContactNumber", order.RecipientContactNumber);
             result.Parameters.AddWithValue("@SenderName", order.SenderName);
             result.Parameters.AddWithValue("@SenderEmail", order.SenderEmail);
+            result.Parameters.AddWithValue("@SenderContactNumber", order.SenderContactNumber);
             result.Parameters.AddWithValue("@AdditionalMes", order.AdditionalMessage);
 
             return result;

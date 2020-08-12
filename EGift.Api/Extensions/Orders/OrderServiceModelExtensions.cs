@@ -58,6 +58,8 @@
                 AdditionalMessage = serviceResponse.AdditionalMessage,
                 MerchantName = serviceResponse.MerchantName,
                 TotalOrderedAmount = serviceResponse.TotalOrderedAmount,
+                RecipientContactNumber = serviceResponse.RecipientContactNumber,
+                SenderContactNumber = serviceResponse.SenderContactNumber,
                 OrderProductData = new ProductWebModel()
                 {
                     Id = serviceResponse.OrderProduct.Id,
