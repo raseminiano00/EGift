@@ -51,7 +51,8 @@
                     {
                         Id = webModel.ProductId,
                         Price = webModel.Price,
-                        Quantity = webModel.Quantity
+                        Quantity = webModel.Quantity,
+                        Description = webModel.ProductDescription
                     }
                 }
             };

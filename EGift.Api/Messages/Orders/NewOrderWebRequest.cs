@@ -44,5 +44,8 @@
 
         [JsonProperty("additionalMessage")]
         public string AdditionalMessage { get; set; }
+
+        [JsonProperty("productDescription")]
+        public string ProductDescription { get; set; }
     }
 }

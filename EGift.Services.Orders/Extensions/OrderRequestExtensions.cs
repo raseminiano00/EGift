@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
+    using EGift.Services.Email.Messages;
     using EGift.Services.Orders.Data.Entities;
     using EGift.Services.Orders.Messages;
 
@@ -31,6 +32,21 @@
             var result = new OrderEntity()
             {
                 Id = request.Order.Id,
+            };
+            return result;
+        }
+
+        public static SendEmailRequest AsEmailRequest(this NewOrderRequest request)
+        {
+            var result = new SendEmailRequest()
+            {
+                RecipientName = request.Order.RecipientName,
+                RecipientEmail = request.Order.RecipientEmail,
+                SenderName = request.Order.SenderName,
+                SenderEmail = request.Order.SenderEmail,
+                OrderAmount = request.Order.TotalOrderedAmount,
+                ProductDescription = request.Order.OrderProduct.Description,
+                Quantity = request.Order.OrderProduct.Quantity
             };
             return result;
         }

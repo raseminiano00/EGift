@@ -536,6 +536,26 @@
           }
         }
       },
+      "SendGrid/9.20.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "starkbank-ecdsa": "1.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SendGrid.dll": {
+            "assemblyVersion": "9.20.0.0",
+            "fileVersion": "9.20.0.0"
+          }
+        }
+      },
+      "starkbank-ecdsa/1.2.0": {
+        "runtime": {
+          "lib/netstandard2.1/StarkbankEcdsa.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -1246,9 +1266,19 @@
           "EGift.Infrastructure.dll": {}
         }
       },
+      "EGift.Services.Email/1.0.0": {
+        "dependencies": {
+          "EGift.Infrastructure": "1.0.0",
+          "SendGrid": "9.20.0"
+        },
+        "runtime": {
+          "EGift.Services.Email.dll": {}
+        }
+      },
       "EGift.Services.Orders/1.0.0": {
         "dependencies": {
           "EGift.Infrastructure": "1.0.0",
+          "EGift.Services.Email": "1.0.0",
           "System.Data.SqlClient": "4.8.1"
         },
         "runtime": {
@@ -1529,6 +1559,20 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "SendGrid/9.20.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WIcSq0G8bxHUtCblB3RAUO5sYz9ZyWrEhObcGdvDr9a9U9BXHWqnGdwHn8Yh+12ovGMdZUvjknG0aalSSt8RuA==",
+      "path": "sendgrid/9.20.0",
+      "hashPath": "sendgrid.9.20.0.nupkg.sha512"
+    },
+    "starkbank-ecdsa/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hP53QPYOOEIR44EK9phz+DYliM6DEieDZxpb8GZzE+++qyrWqUscKcyHCC6L9yu/ehllYtqxtT4qrjWDsuQlUQ==",
+      "path": "starkbank-ecdsa/1.2.0",
+      "hashPath": "starkbank-ecdsa.1.2.0.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",
@@ -1993,6 +2037,11 @@
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },
     "EGift.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EGift.Services.Email/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

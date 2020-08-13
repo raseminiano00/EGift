@@ -20,6 +20,7 @@ namespace EGift.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.InjectEmailService();
             services.InjectMerchantService();
             services.InjectHelpers();
             services.InjectOrderServices();

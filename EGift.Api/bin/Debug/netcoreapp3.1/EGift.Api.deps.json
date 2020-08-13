@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "EGift.Api/1.0.0": {
         "dependencies": {
+          "EGift.Services.Email": "1.0.0",
           "EGift.Services.Merchants": "1.0.0",
           "EGift.Services.Orders": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
@@ -509,6 +510,18 @@
           "EGift.Infrastructure.dll": {}
         }
       },
+      "EGift.Services.Email/1.0.0": {
+        "dependencies": {
+          "EGift.Infrastructure": "1.0.0",
+          "SendGrid": "9.20.0"
+        },
+        "runtime": {
+          "EGift.Services.Email.dll": {}
+        },
+        "compile": {
+          "EGift.Services.Email.dll": {}
+        }
+      },
       "EGift.Services.Merchants/1.0.0": {
         "dependencies": {
           "EGift.Infrastructure": "1.0.0",
@@ -524,6 +537,7 @@
       "EGift.Services.Orders/1.0.0": {
         "dependencies": {
           "EGift.Infrastructure": "1.0.0",
+          "EGift.Services.Email": "1.0.0",
           "System.Data.SqlClient": "4.8.1"
         },
         "runtime": {
@@ -2430,6 +2444,11 @@
       "hashPath": "system.text.encodings.web.4.5.0.nupkg.sha512"
     },
     "EGift.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EGift.Services.Email/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

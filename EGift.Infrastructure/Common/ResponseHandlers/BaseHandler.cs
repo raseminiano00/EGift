@@ -1,6 +1,7 @@
 ﻿namespace EGift.Infrastructure.Common.ResponseHandlers
 {
     using System;
+    using System.Threading.Tasks;
 
     public abstract class BaseHandler<T> : IHandler<T>
     {

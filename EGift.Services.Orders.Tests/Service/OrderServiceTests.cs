@@ -4,6 +4,7 @@
     using System.Data;
     using System.Threading.Tasks;
     using EGift.Infrastructure.Common;
+    using EGift.Services.Email;
     using EGift.Services.Orders.Data.Gateways;
     using EGift.Services.Orders.Exceptions;
     using EGift.Services.Orders.Messages;
@@ -16,6 +17,7 @@
     {
         private OrderService sut;
         private Mock<IOrderDataGateway> mockGateway;
+        private Mock<IEmailService> mockEmailService;
         private Mock<IResponseHandlerFacade> mockResponseHandler;
         private List<Order> mockResult;
         private DataTable mockTable;
@@ -25,7 +27,8 @@
         {
             this.mockGateway = new Mock<IOrderDataGateway>();
             this.mockResponseHandler = new Mock<IResponseHandlerFacade>();
-            this.sut = new OrderService(this.mockGateway.Object, this.mockResponseHandler.Object);
+            this.mockEmailService = new Mock<IEmailService>();
+            this.sut = new OrderService(this.mockGateway.Object, this.mockResponseHandler.Object, this.mockEmailService.Object);
             this.mockResult = new List<Order>();
             this.mockResult.Add(new Order() 
             {
@@ -40,7 +43,7 @@
         [ExpectedException(typeof(OrderServiceException))]
         public void Constructor_ShouldFail_WhenArgIsNull()
         {
-            this.sut = new OrderService(null,null);
+            this.sut = new OrderService(null,null,null);
         }
 
         [TestMethod]
