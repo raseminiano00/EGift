@@ -46,7 +46,7 @@
                     RecipientName = webModel.RecipientName,
                     RecipientContactNumber = webModel.RecipientContactNumber,
                     TotalOrderedAmount = webModel.totalOrderAmount,
-                    AdditionalMessage = webModel.AdditionalMessage,
+                    AdditionalMessage = webModel.AdditionalMessage == null ? "" : webModel.AdditionalMessage,
                     OrderProduct = new OrderProduct() 
                     {
                         Id = webModel.ProductId,

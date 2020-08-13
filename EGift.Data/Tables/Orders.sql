@@ -11,6 +11,6 @@
     [SenderEmailAddress] NVARCHAR(MAX) NOT NULL, 
     [SenderContactNumber] NVARCHAR(20) NOT NULL DEFAULT '', 
     [DateOrdered] DATETIME NOT NULL DEFAULT getDate(), 
-    [AdditionalMessage] NVARCHAR(MAX) NULL, 
+    [AdditionalMessage] NVARCHAR(MAX) NULL DEFAULT '', 
     CONSTRAINT [FK_Orders_Products] FOREIGN KEY ([ProductId]) REFERENCES [Products]([Id])
 )
