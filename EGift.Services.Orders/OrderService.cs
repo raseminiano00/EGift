@@ -4,6 +4,7 @@
     using System.Threading.Tasks;
     using EGift.Infrastructure.Common;
     using EGift.Infrastructure.Common.ResponseHandlers;
+    using EGift.Services.Email;
     using EGift.Services.Orders.Data.Gateways;
     using EGift.Services.Orders.Exceptions;
     using EGift.Services.Orders.Messages;
@@ -12,8 +13,9 @@
     {
         private IOrderDataGateway gateway;
         private IResponseHandlerFacade responseHandler;
+        private IEmailService emailService;
 
-        public OrderService(IOrderDataGateway gateway,IResponseHandlerFacade responseHandler)
+        public OrderService(IOrderDataGateway gateway,IResponseHandlerFacade responseHandler,IEmailService emailService)
         {
             if (gateway == null || responseHandler == null)
             {

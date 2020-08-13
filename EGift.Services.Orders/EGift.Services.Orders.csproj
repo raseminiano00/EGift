@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EGift.Infrastructure\EGift.Infrastructure.csproj" />
+    <ProjectReference Include="..\EGift.Services.Email\EGift.Services.Email.csproj" />
   </ItemGroup>
 
 </Project>

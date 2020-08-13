@@ -10,3 +10,5 @@ C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orde
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders\bin\Debug\netcoreapp3.1\EGift.Infrastructure.dll
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders\bin\Debug\netcoreapp3.1\EGift.Infrastructure.pdb
 C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders\obj\Debug\netcoreapp3.1\EGift.Services.Orders.csproj.CopyComplete
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders\bin\Debug\netcoreapp3.1\EGift.Services.Email.dll
+C:\Users\Roi\Documents\REPOSITORY\YS\FullStackTraining\EGift\EGift.Services.Orders\bin\Debug\netcoreapp3.1\EGift.Services.Email.pdb

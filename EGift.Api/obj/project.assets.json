@@ -216,6 +216,28 @@
           }
         }
       },
+      "SendGrid/9.20.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "starkbank-ecdsa": "[1.2.0, 2.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/SendGrid.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SendGrid.dll": {}
+        }
+      },
+      "starkbank-ecdsa/1.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/StarkbankEcdsa.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/StarkbankEcdsa.dll": {}
+        }
+      },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
@@ -336,6 +358,20 @@
           "bin/placeholder/EGift.Infrastructure.dll": {}
         }
       },
+      "EGift.Services.Email/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "EGift.Infrastructure": "1.0.0",
+          "SendGrid": "9.20.0"
+        },
+        "compile": {
+          "bin/placeholder/EGift.Services.Email.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EGift.Services.Email.dll": {}
+        }
+      },
       "EGift.Services.Merchants/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -355,6 +391,7 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "EGift.Infrastructure": "1.0.0",
+          "EGift.Services.Email": "1.0.0",
           "System.Data.SqlClient": "4.8.1"
         },
         "compile": {
@@ -666,6 +703,45 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "SendGrid/9.20.0": {
+      "sha512": "WIcSq0G8bxHUtCblB3RAUO5sYz9ZyWrEhObcGdvDr9a9U9BXHWqnGdwHn8Yh+12ovGMdZUvjknG0aalSSt8RuA==",
+      "type": "package",
+      "path": "sendgrid/9.20.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/SendGrid.dll",
+        "lib/net40/SendGrid.pdb",
+        "lib/net40/SendGrid.xml",
+        "lib/net452/SendGrid.dll",
+        "lib/net452/SendGrid.pdb",
+        "lib/net452/SendGrid.xml",
+        "lib/netstandard1.3/SendGrid.dll",
+        "lib/netstandard1.3/SendGrid.pdb",
+        "lib/netstandard1.3/SendGrid.xml",
+        "lib/netstandard2.0/SendGrid.dll",
+        "lib/netstandard2.0/SendGrid.pdb",
+        "lib/netstandard2.0/SendGrid.xml",
+        "sendgrid.9.20.0.nupkg.sha512",
+        "sendgrid.nuspec"
+      ]
+    },
+    "starkbank-ecdsa/1.2.0": {
+      "sha512": "hP53QPYOOEIR44EK9phz+DYliM6DEieDZxpb8GZzE+++qyrWqUscKcyHCC6L9yu/ehllYtqxtT4qrjWDsuQlUQ==",
+      "type": "package",
+      "path": "starkbank-ecdsa/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/StarkbankEcdsa.dll",
+        "lib/net452/StarkbankEcdsa.dll",
+        "lib/netstandard1.3/StarkbankEcdsa.dll",
+        "lib/netstandard2.0/StarkbankEcdsa.dll",
+        "lib/netstandard2.1/StarkbankEcdsa.dll",
+        "starkbank-ecdsa.1.2.0.nupkg.sha512",
+        "starkbank-ecdsa.nuspec"
       ]
     },
     "System.Buffers/4.5.0": {
@@ -1046,6 +1122,11 @@
       "path": "../EGift.Infrastructure/EGift.Infrastructure.csproj",
       "msbuildProject": "../EGift.Infrastructure/EGift.Infrastructure.csproj"
     },
+    "EGift.Services.Email/1.0.0": {
+      "type": "project",
+      "path": "../EGift.Services.Email/EGift.Services.Email.csproj",
+      "msbuildProject": "../EGift.Services.Email/EGift.Services.Email.csproj"
+    },
     "EGift.Services.Merchants/1.0.0": {
       "type": "project",
       "path": "../EGift.Services.Merchants/EGift.Services.Merchants.csproj",
@@ -1059,10 +1140,12 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "EGift.Services.Email >= 1.0.0",
       "EGift.Services.Merchants >= 1.0.0",
       "EGift.Services.Orders >= 1.0.0",
       "Microsoft.AspNetCore.Cors >= 2.2.0",
-      "Newtonsoft.Json >= 12.0.3"
+      "Newtonsoft.Json >= 12.0.3",
+      "SendGrid >= 9.20.0"
     ]
   },
   "packageFolders": {
@@ -1091,6 +1174,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\Users\\Roi\\Documents\\REPOSITORY\\YS\\FullStackTraining\\EGift\\EGift.Services.Email\\EGift.Services.Email.csproj": {
+              "projectPath": "C:\\Users\\Roi\\Documents\\REPOSITORY\\YS\\FullStackTraining\\EGift\\EGift.Services.Email\\EGift.Services.Email.csproj"
+            },
             "C:\\Users\\Roi\\Documents\\REPOSITORY\\YS\\FullStackTraining\\EGift\\EGift.Services.Merchants\\EGift.Services.Merchants.csproj": {
               "projectPath": "C:\\Users\\Roi\\Documents\\REPOSITORY\\YS\\FullStackTraining\\EGift\\EGift.Services.Merchants\\EGift.Services.Merchants.csproj"
             },
@@ -1116,6 +1202,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
+          },
+          "SendGrid": {
+            "target": "Package",
+            "version": "[9.20.0, )"
           }
         },
         "imports": [

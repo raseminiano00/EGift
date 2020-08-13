@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Xaml0SvjdhrcodpEALj6Z32PMCbIAnLWDiXKwvt9/endzPPExdGki6X+yu0RDQJvLh7edc6ykqY7LF2DXHNg5g==",
+  "dgSpecHash": "tyMn1h9Bn+LsWFUX39cv7p+qY6fOuAstMOKfL2xUn/9JDLbJghHcegAfIFGiBVEEg0UmRN+xhxo6cGgeSPb64g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Roi\\Documents\\REPOSITORY\\YS\\FullStackTraining\\EGift\\EGift.Api\\EGift.Api.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,8 @@
     "C:\\Users\\Roi\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Roi\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Roi\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Roi\\.nuget\\packages\\sendgrid\\9.20.0\\sendgrid.9.20.0.nupkg.sha512",
+    "C:\\Users\\Roi\\.nuget\\packages\\starkbank-ecdsa\\1.2.0\\starkbank-ecdsa.1.2.0.nupkg.sha512",
     "C:\\Users\\Roi\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Roi\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512",
     "C:\\Users\\Roi\\.nuget\\packages\\system.data.sqlclient\\4.8.1\\system.data.sqlclient.4.8.1.nupkg.sha512",
